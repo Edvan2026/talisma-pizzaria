@@ -3,37 +3,31 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Talisma Pizzaria</title>
+<title>Talismã Pizzaria</title>
 
 <style>
 body {
-    font-family: Arial;
+    font-family: Arial, sans-serif;
     margin: 0;
-    text-align: center;
     background: #f5f5f5;
+    text-align: center;
 }
 
 /* HEADER */
 header {
     background: #0d3b66;
     color: white;
-    padding: 25px 20px 20px 20px;
-    text-align: center;
+    padding: 25px 15px;
 }
 
 .logo {
     width: 110px;
-    display: block;
-    margin: 0 auto 5px auto;
+    margin-bottom: 10px;
 }
 
 h1 {
     margin: 5px 0;
     font-size: 26px;
-}
-
-header p {
-    margin: 0;
 }
 
 /* CONTEÚDO */
@@ -46,7 +40,7 @@ header p {
     display: block;
     background: #25D366;
     color: white;
-    padding: 18px;
+    padding: 16px;
     margin: 20px auto;
     width: 90%;
     max-width: 350px;
@@ -57,30 +51,32 @@ header p {
 }
 
 /* CARD */
-.promo, .cardapio {
-    background: #fff;
+.card {
+    background: white;
     padding: 15px;
-    border-radius: 10px;
     margin: 20px auto;
     max-width: 400px;
+    border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-/* WHATSAPP FLUTUANTE */
+/* BOTÃO WHATSAPP FLUTUANTE */
 .whatsapp-float {
     position: fixed;
-    width: 65px;
-    height: 65px;
     bottom: 20px;
     right: 20px;
+    width: 65px;
+    height: 65px;
     background-color: #25D366;
-    color: #FFF;
+    color: white;
     border-radius: 50%;
     font-size: 28px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    z-index: 999;
 }
 </style>
 
@@ -90,38 +86,31 @@ header p {
 
 <header>
     <img src="logo.png" class="logo">
-
-    <h1>🍕 TALISMÃ PIZZARIA</h1>
-
-    <p>Pizza quentinha e entrega rápida!</p>
+    <h1>Talismã Pizzaria</h1>
+    <p>Pizza quentinha e entrega rápida</p>
 </header>
 
 <div class="container">
 
-<p>Quer pizza quentinha agora? 🍕<br>Peça pelo WhatsApp e receba em minutos!</p>
+<p>Peça agora pelo WhatsApp 🍕</p>
 
 <a class="botao" href="https://wa.me/553438211320">
-📲 QUERO MINHA PIZZA AGORA
+📲 PEDIR AGORA
 </a>
 
-<div class="promo">
-<h2>🔥 PROMOÇÃO HOJE</h2>
-<p><strong>Pizza Grande de Calabresa por apenas R$49,90</strong></p>
+<div class="card">
+<h2>🔥 Promoção</h2>
+<p>Pizza de Calabresa por apenas R$49,90</p>
 </div>
 
-<div class="cardapio">
+<div class="card">
 <h3>Cardápio</h3>
 <p>Calabresa | Mussarela | Portuguesa | Frango com Catupiry</p>
 </div>
 
-<a class="botao" href="https://wa.me/553438211320">
-🍕 FAZER PEDIDO AGORA
-</a>
-
-<p>📞 (34) 3821-1320</p>
-
 </div>
 
+<!-- BOTÃO FLUTUANTE -->
 <a href="https://wa.me/553438211320" class="whatsapp-float">
 💬
 </a>
@@ -130,7 +119,11 @@ header p {
 </html>
 
 
-
+  
    
+
+
+
+
 
 
