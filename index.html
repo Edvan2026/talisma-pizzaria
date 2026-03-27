@@ -3,25 +3,31 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Talismã Pizzaria</title>
+<title>Talisma Pizzaria</title>
 
 <style>
 body {
+    font-family: Arial;
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f5f5f5;
     text-align: center;
+    background: #f5f5f5;
 }
 
 header {
     background: #0d3b66;
     color: white;
-    padding: 20px;
+    padding: 25px 20px;
 }
 
 .logo {
-    width: 100px;
-    margin-bottom: 10px;
+    width: 110px;
+    display: block;
+    margin: 0 auto 10px auto;
+}
+
+h1 {
+    margin: 5px 0;
+    font-size: 26px;
 }
 
 .container {
@@ -32,22 +38,23 @@ header {
     display: block;
     background: #25D366;
     color: white;
-    padding: 15px;
-    margin: 15px auto;
+    padding: 18px;
+    margin: 20px auto;
     width: 90%;
-    max-width: 320px;
-    border-radius: 8px;
+    max-width: 350px;
+    font-size: 18px;
+    border-radius: 10px;
     text-decoration: none;
     font-weight: bold;
 }
 
-.card {
-    background: white;
+.promo, .cardapio {
+    background: #fff;
     padding: 15px;
-    margin: 15px auto;
-    max-width: 350px;
     border-radius: 10px;
-    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    margin: 20px auto;
+    max-width: 400px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 /* BOTÃO FLUTUANTE */
@@ -55,18 +62,18 @@ header {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    width: 60px;
-    height: 60px;
+    width: 65px;
+    height: 65px;
     background: #25D366;
     color: white;
     border-radius: 50%;
-    font-size: 26px;
+    font-size: 28px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.3);
-    z-index: 9999;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    z-index: 999;
 }
 </style>
 
@@ -76,7 +83,7 @@ header {
 
 <header>
     <img src="logo.png" class="logo">
-    <h1>Talismã Pizzaria</h1>
+    <h1>TALISMÃ PIZZARIA</h1>
     <p>Pizza quentinha e entrega rápida</p>
 </header>
 
@@ -84,27 +91,19 @@ header {
 
 <p>Peça agora pelo WhatsApp 🍕</p>
 
-<!-- BOTÃO 1 -->
 <a class="botao" href="https://wa.me/553438211320">
 📲 PEDIR AGORA
 </a>
 
-<!-- BOTÃO 2 -->
-<a class="botao" href="https://wa.me/553438211320">
-🍕 FAZER PEDIDO AGORA
-</a>
-
-<div class="card">
+<div class="promo">
 <h2>🔥 Promoção</h2>
-<p>Pizza de Calabresa por R$49,90</p>
+<p>Pizza Calabresa por R$49,90</p>
 </div>
 
-<div class="card">
+<div class="cardapio">
 <h3>Cardápio</h3>
 <p>Calabresa | Mussarela | Portuguesa | Frango</p>
 </div>
-
-<p>📞 (34) 3821-1320</p>
 
 </div>
 
@@ -115,10 +114,3 @@ header {
 
 </body>
 </html>
-
-
-
-
-
-
-
