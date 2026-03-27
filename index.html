@@ -7,80 +7,105 @@
 
 <style>
 body {
-    margin: 0;
     font-family: Arial;
+    margin: 0;
     text-align: center;
-    background: #fff;
+    background: #f5f5f5;
+}
+
+header {
+    background: #d62828;
+    color: white;
+    padding: 20px;
 }
 
 .logo {
-    width: 180px;
-    margin-top: 20px;
+    width: 140px;
+    margin-bottom: 10px;
 }
 
-h1 {
-    color: #d62828;
+.container {
+    padding: 20px;
 }
 
 .botao {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 15px 25px;
-    background: #25d366;
-    color: #fff;
+    display: block;
+    background: #25D366;
+    color: white;
+    padding: 18px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 350px;
     font-size: 18px;
-    text-decoration: none;
     border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-.whatsapp-fixo {
+.promo, .cardapio {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 400px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.whatsapp-float {
     position: fixed;
+    width: 65px;
+    height: 65px;
     bottom: 20px;
     right: 20px;
-    background: #25d366;
-    color: #fff;
-    padding: 15px;
+    background-color: #25D366;
+    color: #FFF;
     border-radius: 50%;
-    font-size: 20px;
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-decoration: none;
 }
 </style>
-
 </head>
 
 <body>
 
+<header>
 <img src="logo.png" class="logo">
-
 <h1>🍕 TALISMÃ PIZZARIA</h1>
-
 <p>Pizza quentinha e entrega rápida!</p>
+</header>
 
-<p><strong>🔥 Promoção:</strong> Calabresa por R$49,90</p>
+<div class="container">
+
+<p>Quer pizza quentinha agora? 🍕<br>Peça pelo WhatsApp e receba em minutos!</p>
 
 <a class="botao" href="https://wa.me/553438211320">
-📲 Pedir pelo WhatsApp
+📲 QUERO MINHA PIZZA AGORA
 </a>
 
-<a class="whatsapp-fixo" href="https://wa.me/553438211320">
+<div class="promo">
+<h2>🔥 PROMOÇÃO HOJE</h2>
+<p><strong>Pizza Grande de Calabresa por apenas R$49,90</strong></p>
+</div>
+
+<div class="cardapio">
+<h3>Cardápio</h3>
+<p>Calabresa | Mussarela | Portuguesa | Frango com Catupiry</p>
+</div>
+
+<a class="botao" href="https://wa.me/553438211320">
+🍕 FAZER PEDIDO AGORA
+</a>
+
+<p>📞 (34) 3821-1320</p>
+
+</div>
+
+<a href="https://wa.me/553438211320" class="whatsapp-float">
 💬
 </a>
 
 </body>
 </html>
-
-
-   
-
-
-
-
-
-
-
-
-
- 
-
-
-
