@@ -8,9 +8,9 @@
 <style>
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f5f5f5;
+    font-family: Arial;
     text-align: center;
+    background: #f5f5f5;
 }
 
 header {
@@ -19,21 +19,12 @@ header {
     padding: 20px;
 }
 
-.logo {
-    width: 100px;
-    margin-bottom: 10px;
-}
-
-.container {
-    padding: 20px;
-}
-
 .botao {
     display: block;
     background: #25D366;
     color: white;
     padding: 15px;
-    margin: 15px auto;
+    margin: 10px auto;
     width: 90%;
     max-width: 320px;
     border-radius: 8px;
@@ -47,11 +38,6 @@ header {
     margin: 15px auto;
     max-width: 350px;
     border-radius: 10px;
-    box-shadow: 0 0 8px rgba(0,0,0,0.1);
-}
-
-.whatsapp-extra {
-    background: #128C7E;
 }
 </style>
 
@@ -60,12 +46,9 @@ header {
 <body>
 
 <header>
-    <img src="logo.png" class="logo">
-    <h1>Talismã Pizzaria</h1>
-    <p>Pizza quentinha e entrega rápida</p>
+<h1>Talismã Pizzaria</h1>
+<p>Pizza quentinha e entrega rápida</p>
 </header>
-
-<div class="container">
 
 <p>Peça agora 🍕</p>
 
@@ -73,7 +56,7 @@ header {
 📲 PEDIR AGORA
 </a>
 
-<a class="botao whatsapp-extra" href="https://wa.me/553438211320">
+<a class="botao" href="https://wa.me/553438211320">
 💬 FALAR NO WHATSAPP
 </a>
 
@@ -84,7 +67,6 @@ header {
 <a class="botao" href="https://pedido.anota.ai/loja/talisma-pizzaria-hamburgueria?f=msa&ol=r&sl=su" target="_blank">
 📖 VER CARDÁPIO COMPLETO
 </a>
-
 </div>
 
 <div class="card">
@@ -94,24 +76,19 @@ header {
 
 <p>📞 (34) 3821-1320</p>
 
-</div>
+<!-- BOTÃO FLUTUANTE -->
+<a href="https://wa.me/553438211320" style="
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:20px;
+border-radius:50%;
+z-index:9999;
+">
+💬
+</a>
 
 </body>
 </html>
-
-
-   
-   
-
-
-
-    
-
-
-
-
-
-
-
-
-
