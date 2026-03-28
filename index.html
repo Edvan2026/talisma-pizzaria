@@ -13,7 +13,6 @@ body {
     text-align: center;
 }
 
-/* TOPO AZUL */
 header {
     background: #0d3b66;
     color: white;
@@ -29,7 +28,6 @@ header {
     padding: 20px;
 }
 
-/* BOTÕES */
 .botao {
     display: block;
     background: #25D366;
@@ -43,7 +41,6 @@ header {
     font-weight: bold;
 }
 
-/* CARD */
 .card {
     background: white;
     padding: 15px;
@@ -53,26 +50,26 @@ header {
     box-shadow: 0 0 8px rgba(0,0,0,0.1);
 }
 
-/* BOTÃO FLUTUANTE WHATSAPP */
+/* BOTÃO FLUTUANTE (FORÇADO) */
 .whatsapp-float {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 60px;
-    height: 60px;
+    position: fixed !important;
+    bottom: 20px !important;
+    right: 20px !important;
+    width: 65px;
+    height: 65px;
     background: #25D366;
     color: white;
     border-radius: 50%;
-    font-size: 26px;
-    display: flex;
+    font-size: 28px;
+    display: flex !important;
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.3);
-    z-index: 9999;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    z-index: 999999 !important;
 }
 
-/* BOTÃO EXTRA WHATSAPP */
+/* BOTÃO EXTRA */
 .whatsapp-extra {
     background: #128C7E;
 }
@@ -92,42 +89,41 @@ header {
 
 <p>Peça agora 🍕</p>
 
-<!-- BOTÃO PRINCIPAL -->
 <a class="botao" href="https://wa.me/553438211320">
 📲 PEDIR AGORA
 </a>
 
-<!-- BOTÃO EXTRA WHATSAPP -->
 <a class="botao whatsapp-extra" href="https://wa.me/553438211320">
 💬 FALAR NO WHATSAPP
 </a>
 
-<!-- CARDÁPIO -->
 <div class="card">
 <h3>Cardápio</h3>
 <p>Calabresa | Mussarela | Portuguesa | Frango com Catupiry</p>
 
-<a class="botao" href="https://pedido.anota.ai/loja/talisman-pizzaria-hamburgueria/?f=MSA" target="_blank">
+<a class="botao" href="https://pedido.anota.ai/loja/talisma-pizzaria-hamburgueria?f=msa&ol=r&sl=su" target="_blank">
 📖 VER CARDÁPIO COMPLETO
 </a>
 
 </div>
 
-<!-- PROMOÇÃO -->
 <div class="card">
 <h2>🔥 Promoção</h2>
 <p>Pizza de Calabresa por R$49,90</p>
 </div>
 
-<!-- TELEFONE -->
 <p>📞 (34) 3821-1320</p>
 
 </div>
 
-<!-- BOTÃO FLUTUANTE -->
-<a href="https://wa.me/553438211320" class="whatsapp-float">
-💬
-</a>
+<!-- BOT
+    
 
-</body>
-</html>
+
+
+
+
+
+
+
+
