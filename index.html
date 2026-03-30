@@ -1,1 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Talisma Pizzaria</title>
 
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18014111349"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-18014111349');
+  </script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff8f0;
+    }
+
+    header {
+      background-color: #0d3b66; /* AZUL MAIS ESCURO 🔥 */
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    header img {
+      max-width: 200px;
+      height: auto;
+      display: block;
+      margin: 0 auto 10px auto;
+    }
+
+    main {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .botao {
+      display: inline-block;
+      background-color: #25D366;
+      color: white;
+      padding: 15px 30px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 18px;
+      margin: 10px;
+    }
+
+    .botao-ligar {
+      display: inline-block;
+      background-color: #0d3b66;
+      color: white;
+      padding: 15px 30px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 18px;
+      margin: 10px;
+    }
+
+    /* 🔥 BOTÕES FLUTUANTES CORRIGIDOS */
+    .botao-flutuante {
+      position: fixed !important;
+      bottom: 20px !important;
+      right: 20px !important;
+      width: 60px;
+      height: 60px;
+      background: #25D366;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+      z-index: 999999 !important;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    .botao-flutuante-ligar {
+      position: fixed !important;
+      bottom: 90px !important;
+      right: 20px !important;
+      width: 60px;
+      height: 60px;
+      background: #0d3b66;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+      z-index: 999999 !important;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <img src="logo.png" alt="Talisma Pizzaria Logo">
+    <h1>Talisma Pizzaria 🍕</h1>
+    <p>Sua pizza favorita entregue rápido e quentinha!</p>
+  </header>
+
+  <main>
+    <h2>Peça sua pizza agora!</h2>
+
+    <a class="botao" href="https://wa.me/553438211320"
+       onclick="gtag('event', 'conversion', {'send_to': 'AW-18014111349'});">
+      📲 PEDIR AGORA
+    </a>
+
+    <a class="botao-ligar" href="tel:+553438211320"
+       onclick="gtag('event', 'conversion', {'send_to': 'AW-18014111349'});">
+      📞 LIGAR AGORA
+    </a>
+
+    <p>Atendimento via WhatsApp disponível.</p>
+  </main>
+
+  <!-- 🔥 WHATSAPP FLUTUANTE -->
+  <a href="https://wa.me/553438211320"
+     class="botao-flutuante"
+     onclick="gtag('event', 'conversion', {'send_to': 'AW-18014111349'});">
+    💬
+  </a>
+
+  <!-- 🔥 LIGAÇÃO FLUTUANTE -->
+  <a href="tel:+553438211320"
+     class="botao-flutuante-ligar"
+     onclick="gtag('event', 'conversion', {'send_to': 'AW-18014111349'});">
+    📞
+  </a>
+
+</body>
+</html>
