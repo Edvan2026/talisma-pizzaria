@@ -1,94 +1,137 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Talismã Pizzaria</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Talisma Pizzaria</title>
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18014111349"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-18014111349');
+  </script>
 
-<style>
-body {
-    margin: 0;
-    font-family: Arial;
-    text-align: center;
-    background: #f5f5f5;
-}
-
-header {
-    background: #0d3b66;
-    color: white;
-    padding: 20px;
-}
-
-.botao {
-    display: block;
-    background: #25D366;
-    color: white;
-    padding: 15px;
-    margin: 10px auto;
-    width: 90%;
-    max-width: 320px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.card {
-    background: white;
-    padding: 15px;
-    margin: 15px auto;
-    max-width: 350px;
-    border-radius: 10px;
-}
-</style>
-
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff8f0;
+    }
+    header {
+      background-color: #d63031;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+    main {
+      padding: 20px;
+      text-align: center;
+    }
+    .botao {
+      display: inline-block;
+      background-color: #25D366;
+      color: white;
+      padding: 15px 30px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 18px;
+      margin: 10px;
+      transition: background 0.3s;
+    }
+    .botao:hover {
+      background-color: #1ebe57;
+    }
+    .botao-ligar {
+      display: inline-block;
+      background-color: #0984e3;
+      color: white;
+      padding: 15px 30px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 18px;
+      margin: 10px;
+      transition: background 0.3s;
+    }
+    .botao-ligar:hover {
+      background-color: #0652c5;
+    }
+    /* Botões flutuantes */
+    .botao-flutuante {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25D366;
+      color: white;
+      padding: 20px;
+      border-radius: 50%;
+      font-size: 24px;
+      text-align: center;
+      z-index: 9999;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: transform 0.2s;
+    }
+    .botao-flutuante:hover {
+      transform: scale(1.1);
+    }
+    .botao-flutuante-ligar {
+      position: fixed;
+      bottom: 90px;
+      right: 20px;
+      background: #0984e3;
+      color: white;
+      padding: 20px;
+      border-radius: 50%;
+      font-size: 24px;
+      text-align: center;
+      z-index: 9999;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: transform 0.2s;
+    }
+    .botao-flutuante-ligar:hover {
+      transform: scale(1.1);
+    }
+  </style>
 </head>
-
 <body>
 
-<header>
-<h1>Talismã Pizzaria</h1>
-<p>Pizza quentinha e entrega rápida</p>
-</header>
+  <header>
+    <h1>Talisma Pizzaria 🍕</h1>
+    <p>Sua pizza favorita entregue rápido e quentinha!</p>
+  </header>
 
-<p>Peça agora 🍕</p>
+  <main>
+    <h2>Peça sua pizza agora!</h2>
+    <a class="botao" href="https://wa.me/553438211320"
+       onclick="gtag('event', 'conversion', {'send_to': 'AW-18014111349'});">
+      📲 PEDIR AGORA
+    </a>
+    <a class="botao-ligar" href="tel:+553438211320"
+       onclick="gtag('event', 'conversion', {'send_to': 'AW-18014111349'});">
+      📞 LIGAR AGORA
+    </a>
+    <p>Atendimento via WhatsApp disponível 24 horas.</p>
+  </main>
 
-<a class="botao" href="https://wa.me/553438211320">
-📲 PEDIR AGORA
-</a>
+  <!-- Botão flutuante WhatsApp -->
+  <a href="https://wa.me/553438211320"
+     class="botao-flutuante"
+     onclick="gtag('event', 'conversion', {'send_to': 'AW-18014111349'});">
+    💬
+  </a>
 
-<a class="botao" href="https://wa.me/553438211320">
-💬 FALAR NO WHATSAPP
-</a>
-
-<div class="card">
-<h3>Cardápio</h3>
-<p>Calabresa | Mussarela | Portuguesa | Frango com Catupiry</p>
-
-<a class="botao" href="https://pedido.anota.ai/loja/talisma-pizzaria-hamburgueria?f=msa&ol=r&sl=su" target="_blank">
-📖 VER CARDÁPIO COMPLETO
-</a>
-</div>
-
-<div class="card">
-<h2>🔥 Promoção</h2>
-<p>Pizza de Calabresa por R$49,90</p>
-</div>
-
-<p>📞 (34) 3821-1320</p>
-
-<!-- BOTÃO FLUTUANTE -->
-<a href="https://wa.me/553438211320" style="
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-color:white;
-padding:20px;
-border-radius:50%;
-z-index:9999;
-">
-💬
-</a>
+  <!-- Botão flutuante ligação -->
+  <a href="tel:+553438211320"
+     class="botao-flutuante-ligar"
+     onclick="gtag('event', 'conversion', {'send_to': 'AW-18014111349'});">
+    📞
+  </a>
 
 </body>
 </html>
+ 
+
