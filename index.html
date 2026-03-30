@@ -5,6 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Talisma Pizzaria</title>
 
+<!-- RASTREIO GOOGLE ADS -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18014111349"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'AW-18014111349');
+</script>
+
 <style>
 body {
     font-family: Arial;
@@ -91,7 +100,8 @@ h1 {
 
 <p>Peça agora pelo WhatsApp 🍕</p>
 
-<a class="botao" href="https://wa.me/553438211320">
+<a class="botao" href="https://wa.me/553438211320"
+onclick="gtag('event','conversion',{'send_to':'AW-18014111349'});">
 📲 PEDIR AGORA
 </a>
 
@@ -108,7 +118,9 @@ h1 {
 </div>
 
 <!-- BOTÃO FLUTUANTE -->
-<a href="https://wa.me/553438211320" class="whatsapp-float">
+<a href="https://wa.me/553438211320"
+class="whatsapp-float"
+onclick="gtag('event','conversion',{'send_to':'AW-18014111349'});">
 💬
 </a>
 
