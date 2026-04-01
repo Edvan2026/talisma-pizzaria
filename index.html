@@ -1,47 +1,164 @@
-<!-- BOTÃO FLUTUANTE WHATSAPP COMPLETO -->
-<div id="whatsapp-button">
-  <a href="https://wa.me/553438211320?text=Olá%20vim%20pelo%20Google" target="_blank">
-    <span>💬 Peça no WhatsApp</span>
-  </a>
-</div>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Talisma Pizzaria</title>
+
+<!-- RASTREIO -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18014111349"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'AW-18014111349');
+</script>
 
 <style>
-#whatsapp-button {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 9999;
+body {
+    font-family: Arial;
+    margin: 0;
+    text-align: center;
+    background: #f5f5f5;
 }
 
-#whatsapp-button a {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  background: #25D366;
-  color: white;
-  padding: 14px 20px;
-  border-radius: 50px;
-  font-size: 16px;
-  font-weight: bold;
-  text-decoration: none;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-  transition: 0.3s;
-  animation: pulse 1.5s infinite;
+header {
+    background: #0d3b66;
+    color: white;
+    padding: 25px 20px;
 }
 
-#whatsapp-button a:hover {
-  transform: scale(1.05);
+.logo {
+    width: 110px;
+    display: block;
+    margin: 0 auto 10px auto;
 }
 
-@keyframes pulse {
-  0% {
-    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
-  }
-  70% {
-    box-shadow: 0 0 0 12px rgba(37, 211, 102, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
-  }
+.container {
+    padding: 20px;
+}
+
+.botao {
+    display: block;
+    background: #25D366;
+    color: white;
+    padding: 18px;
+    margin: 15px auto;
+    width: 90%;
+    max-width: 350px;
+    font-size: 18px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.botao-ligar {
+    display: block;
+    background: #0984e3;
+    color: white;
+    padding: 18px;
+    margin: 15px auto;
+    width: 90%;
+    max-width: 350px;
+    font-size: 18px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.botao-cardapio {
+    display: block;
+    background: #ff9800;
+    color: white;
+    padding: 18px;
+    margin: 15px auto;
+    width: 90%;
+    max-width: 350px;
+    font-size: 18px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* BOTÃO FLUTUANTE SEGURO */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 65px;
+    height: 65px;
+    background: #25D366;
+    color: white;
+    border-radius: 50%;
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    z-index: 999;
+
+    animation: pulsar 1.5s infinite;
+}
+
+/* ANIMAÇÃO SIMPLES (NÃO QUEBRA) */
+@keyframes pulsar {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.12); }
+  100% { transform: scale(1); }
+}
+
+.promo {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 400px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 </style>
+
+</head>
+
+<body>
+
+<header>
+    <img src="logo.png" class="logo">
+    <h1>TALISMÃ PIZZARIA</h1>
+    <p>Pizza quentinha e entrega rápida</p>
+</header>
+
+<div class="container">
+
+<p>Peça agora 👇</p>
+
+<a class="botao" href="https://wa.me/553438211320?text=Olá%20vim%20pelo%20Google"
+onclick="gtag('event','conversion',{'send_to':'AW-18014111349'});">
+📲 PEDIR NO WHATSAPP
+</a>
+
+<a class="botao-ligar" href="tel:+553438211320"
+onclick="gtag('event','conversion',{'send_to':'AW-18014111349'});">
+📞 LIGAR AGORA
+</a>
+
+<a class="botao-cardapio" href="https://pedido.anota.ai/loja/talisma-pizzaria-hamburgueria?f=msa&ol=r&sl=su">
+📋 VER CARDÁPIO COMPLETO
+</a>
+
+<div class="promo">
+<h2>🔥 Promoção</h2>
+<p>Pizza Calabresa por R$49,90</p>
+</div>
+
+</div>
+
+<!-- BOTÃO FLUTUANTE -->
+<a href="https://wa.me/553438211320?text=Olá%20vim%20pelo%20Google"
+class="whatsapp-float"
+onclick="gtag('event','conversion',{'send_to':'AW-18014111349'});">
+💬
+</a>
+
+</body>
+</html>
