@@ -5,12 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Talisma Pizzaria</title>
 
-<!-- RASTREIO -->
+<!-- GOOGLE ADS TAG -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18014111349"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
+
 gtag('config', 'AW-18014111349');
 </script>
 
@@ -80,7 +81,6 @@ header {
     font-weight: bold;
 }
 
-/* BOTÃO FLUTUANTE SEGURO */
 .whatsapp-float {
     position: fixed;
     bottom: 20px;
@@ -97,11 +97,9 @@ header {
     text-decoration: none;
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     z-index: 999;
-
     animation: pulsar 1.5s infinite;
 }
 
-/* ANIMAÇÃO SIMPLES (NÃO QUEBRA) */
 @keyframes pulsar {
   0% { transform: scale(1); }
   50% { transform: scale(1.12); }
@@ -125,38 +123,53 @@ header {
 <header>
     <img src="logo.png" class="logo">
     <h1>TALISMÃ PIZZARIA</h1>
-    <p>Pizza quentinha e entrega rápida</p>
+    <p>Pizza quentinha e entrega rápida 🍕</p>
 </header>
 
 <div class="container">
 
 <p>Peça agora 👇</p>
 
+<!-- BOTÃO WHATSAPP PRINCIPAL -->
 <a class="botao" href="https://wa.me/553438211320?text=Olá%20vim%20pelo%20Google"
-onclick="gtag('event','conversion',{'send_to':'AW-18014111349'});">
+onclick="gtag('event','conversion',{
+'send_to':'AW-18014111349/xDi0CMCg2pIcEPWM5o1D',
+'value':1.0,
+'currency':'BRL'
+});">
 📲 PEDIR NO WHATSAPP
 </a>
 
+<!-- BOTÃO LIGAR -->
 <a class="botao-ligar" href="tel:+553438211320"
-onclick="gtag('event','conversion',{'send_to':'AW-18014111349'});">
+onclick="gtag('event','conversion',{
+'send_to':'AW-18014111349/xDi0CMCg2pIcEPWM5o1D',
+'value':1.0,
+'currency':'BRL'
+});">
 📞 LIGAR AGORA
 </a>
 
+<!-- CARDÁPIO -->
 <a class="botao-cardapio" href="https://pedido.anota.ai/loja/talisma-pizzaria-hamburgueria?f=msa&ol=r&sl=su">
 📋 VER CARDÁPIO COMPLETO
 </a>
 
 <div class="promo">
-<h2>🔥 Promoção</h2>
-<p>Pizza Calabresa por R$49,90</p>
+<h2>🔥 Promoção de Hoje</h2>
+<p>Pizza Calabresa por apenas <strong>R$49,90</strong></p>
 </div>
 
 </div>
 
-<!-- BOTÃO FLUTUANTE -->
+<!-- BOTÃO FLUTUANTE WHATSAPP -->
 <a href="https://wa.me/553438211320?text=Olá%20vim%20pelo%20Google"
 class="whatsapp-float"
-onclick="gtag('event','conversion',{'send_to':'AW-18014111349'});">
+onclick="gtag('event','conversion',{
+'send_to':'AW-18014111349/xDi0CMCg2pIcEPWM5o1D',
+'value':1.0,
+'currency':'BRL'
+});">
 💬
 </a>
 
