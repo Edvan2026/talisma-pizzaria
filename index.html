@@ -104,7 +104,7 @@ header {
   100% { transform: scale(1); }
 }
 
-/* 🔥 PROMOÇÃO (mantida com estilo + corrigida animação) */
+/* PROMOÇÃO */
 .promo {
     background: #d62828;
     color: #ffd60a;
@@ -119,23 +119,12 @@ header {
     margin-bottom: 15px;
 }
 
-/* animação de digitação linha a linha */
-.linha {
-    opacity: 0;
-    transform: translateY(10px);
-    animation: aparecer 1s forwards;
+/* TEXTO DIGITANDO */
+#digitando {
+    font-size: 18px;
+    font-weight: bold;
+    min-height: 24px;
 }
-
-.linha1 { animation-delay: 0.5s; }
-.linha2 { animation-delay: 1.8s; }
-
-@keyframes aparecer {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 </style>
 
 </head>
@@ -176,15 +165,12 @@ Ver cardápio (opcional)
 <div class="promo">
 <h2>🔥 Promoção do Dia</h2>
 
-<div class="linha linha1">
-🍕 Pizza Calabresa Grande por R$49,90
-</div>
+<p id="digitando"></p>
 
 <br>
 
-<div class="linha linha2">
-🍕 Pizza Frango Catupiry Grande por R$67,90
-</div>
+<p><strong>🍕 Calabresa Grande — R$49,90</strong></p>
+<p><strong>🍕 Frango com Catupiry — R$67,90</strong></p>
 
 </div>
 
@@ -199,6 +185,48 @@ onclick="gtag('event','conversion',{
 }); setTimeout(function(){ window.location.href=this.href }.bind(this),200); return false;">
 💬
 </a>
+
+<!-- SCRIPT DIGITANDO -->
+<script>
+const frases = [
+"Pizza de Calabresa saindo quentinha...",
+"Frango com Catupiry bem recheado..."
+];
+
+let i = 0;
+let j = 0;
+let atual = "";
+let apagando = false;
+
+function efeitoDigitando() {
+    const elemento = document.getElementById("digitando");
+
+    if (!apagando && j < frases[i].length) {
+        atual += frases[i].charAt(j);
+        j++;
+    } else if (apagando && j > 0) {
+        atual = atual.substring(0, atual.length - 1);
+        j--;
+    }
+
+    elemento.innerHTML = atual;
+
+    if (j === frases[i].length) {
+        apagando = true;
+        setTimeout(efeitoDigitando, 1500);
+        return;
+    }
+
+    if (j === 0 && apagando) {
+        apagando = false;
+        i = (i + 1) % frases.length;
+    }
+
+    setTimeout(efeitoDigitando, apagando ? 40 : 60);
+}
+
+efeitoDigitando();
+</script>
 
 </body>
 </html>
