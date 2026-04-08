@@ -104,31 +104,37 @@ header {
   100% { transform: scale(1); }
 }
 
-/* 🔥 PROMOÇÃO AJUSTADA */
+/* PROMOÇÃO */
 .promo {
-    background: #d62828; /* vermelho */
-    color: #ffd60a; /* amarelo */
+    background: #d62828;
+    color: #ffd60a;
     padding: 25px;
     border-radius: 12px;
     margin: 25px auto;
     max-width: 400px;
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
-    animation: pulsePromo 2s infinite;
 }
 
 .promo h2 {
     margin-bottom: 15px;
 }
 
-.promo p {
-    font-size: 18px;
-    margin: 10px 0;
+/* efeito digitando */
+.promo-text {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid #ffd60a;
+    width: 0;
+    animation: typing 2.5s steps(40, end) forwards, blink 0.7s infinite;
 }
 
-@keyframes pulsePromo {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-    100% { transform: scale(1); }
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink {
+    50% { border-color: transparent }
 }
 
 </style>
@@ -167,17 +173,18 @@ onclick="gtag('event','conversion',{
 Ver cardápio (opcional)
 </a>
 
-<!-- PROMOÇÃO ATUALIZADA -->
 <div class="promo">
 <h2>🔥 Promoção do Dia</h2>
 
-<p><strong>🍕 Pizza Calabresa Grande</strong><br>
-Por R$49,90</p>
+<div class="promo-text">
+🍕 Pizza Calabresa Grande por R$49,90
+</div>
 
-<hr>
+<br>
 
-<p><strong>🍕 Pizza Frango Catupiry Grande</strong><br>
-Por R$67,90</p>
+<div class="promo-text">
+🍕 Pizza Frango Catupiry Grande por R$67,90
+</div>
 
 </div>
 
