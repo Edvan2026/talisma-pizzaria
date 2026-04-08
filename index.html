@@ -105,3 +105,137 @@ header {
 }
 
 /* PROMOÇÃO */
+.promo {
+    background: #C62828;
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+    margin: 25px auto;
+    max-width: 400px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.preco {
+    color: #FFC107;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* TEXTO DIGITANDO */
+.digitando {
+  border-right: 2px solid #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  font-size: 18px;
+  margin-bottom: 10px;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0% { border-color: white; }
+  50% { border-color: transparent; }
+  100% { border-color: white; }
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+    <img src="logo.png" class="logo">
+    <h1>TALISMÃ PIZZARIA</h1>
+    <p>🔥 Entrega rápida • Pizza quentinha • Peça agora</p>
+</header>
+
+<div class="container">
+
+<h2>🍕 Peça sua pizza agora</h2>
+
+<!-- BOTÃO WHATSAPP -->
+<a class="botao" 
+href="https://wa.me/553438211320?text=Olá%2C%20vim%20pelo%20Google%20e%20quero%20pedir%20uma%20pizza%20🍕"
+onclick="gtag('event','conversion',{
+'send_to':'AW-18014111349/xDi0CMCg2pIcEPWM5o1D',
+'value':1.0,
+'currency':'BRL'
+}); setTimeout(function(){ window.location.href=this.href }.bind(this),200); return false;">
+📲 PEDIR NO WHATSAPP AGORA
+</a>
+
+<p><strong>⚡ Atendimento rápido • Entrega em até 30 minutos</strong></p>
+
+<!-- LIGAR -->
+<a class="botao-ligar" href="tel:+553438211320">
+📞 LIGAR AGORA
+</a>
+
+<!-- CARDÁPIO -->
+<a class="botao-cardapio" href="https://pedido.anota.ai/loja/talisma-pizzaria-hamburgueria?f=msa&ol=r&sl=su">
+Ver cardápio (opcional)
+</a>
+
+<!-- PROMOÇÃO -->
+<div class="promo">
+
+<h2>🔥 PROMOÇÃO DO DIA</h2>
+
+<h3 class="digitando" id="textoPromo"></h3>
+
+<p>🍕 Calabresa Grande <span class="preco">R$49,90</span></p>
+<p>🍕 Frango c/ Catupiry Grande <span class="preco">R$67,90</span></p>
+
+</div>
+
+</div>
+
+<!-- WHATSAPP FLUTUANTE -->
+<a href="https://wa.me/553438211320?text=Olá%2C%20vim%20pelo%20Google%20e%20quero%20pedir%20uma%20pizza%20🍕"
+class="whatsapp-float"
+onclick="gtag('event','conversion',{
+'send_to':'AW-18014111349/xDi0CMCg2pIcEPWM5o1D',
+'value':1.0,
+'currency':'BRL'
+}); setTimeout(function(){ window.location.href=this.href }.bind(this),200); return false;">
+💬
+</a>
+
+<!-- SCRIPT DIGITANDO -->
+<script>
+const textos = [
+  "🍕 Calabresa Grande R$49,90",
+  "🔥 Frango c/ Catupiry Grande R$67,90"
+];
+
+let i = 0;
+let j = 0;
+let apagando = false;
+
+function animar() {
+  let texto = textos[i];
+  let elemento = document.getElementById("textoPromo");
+
+  if (!apagando) {
+    elemento.innerHTML = texto.substring(0, j++);
+    if (j > texto.length) {
+      apagando = true;
+      setTimeout(animar, 1500);
+      return;
+    }
+  } else {
+    elemento.innerHTML = texto.substring(0, j--);
+    if (j < 0) {
+      apagando = false;
+      i = (i + 1) % textos.length;
+    }
+  }
+
+  setTimeout(animar, 80);
+}
+
+animar();
+</script>
+
+</body>
+</html>
