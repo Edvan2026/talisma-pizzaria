@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Talisma Pizzaria</title>
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18014111349"></script>
+<script src="https://www.googletagmanager.com/gtag/js?id=AW-18014111349"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
@@ -142,12 +142,15 @@ header {
 <h2>🍕 Peça sua pizza agora</h2>
 
 <a class="botao" 
-href="https://wa.me/553438211320?text=Olá%2C%20vim%20pelo%20Google%20e%20quero%20pedir%20uma%20pizza%20🍕"
+href="#"
 onclick="gtag('event','conversion',{
 'send_to':'AW-18014111349/xDi0CMCg2pIcEPWM5o1D',
 'value':1.0,
-'currency':'BRL'
-}); setTimeout(function(){ window.location.href=this.href }.bind(this),200); return false;">
+'currency':'BRL',
+'event_callback': function() {
+  window.location.href='https://wa.me/553438211320?text=Olá%2C%20vim%20pelo%20Google%20e%20quero%20pedir%20uma%20pizza%20🍕';
+}
+}); return false;">
 📲 PEDIR NO WHATSAPP AGORA
 </a>
 
@@ -161,72 +164,9 @@ onclick="gtag('event','conversion',{
 Ver cardápio (opcional)
 </a>
 
-<!-- PROMOÇÃO -->
 <div class="promo">
 <h2>🔥 Promoção do Dia</h2>
-
 <p id="digitando"></p>
-
 <br>
-
 <p><strong>🍕 Calabresa Grande — R$49,90</strong></p>
-<p><strong>🍕 Frango com Catupiry — R$67,90</strong></p>
-
-</div>
-
-</div>
-
-<a href="https://wa.me/553438211320?text=Olá%2C%20vim%20pelo%20Google%20e%20quero%20pedir%20uma%20pizza%20🍕"
-class="whatsapp-float"
-onclick="gtag('event','conversion',{
-'send_to':'AW-18014111349/xDi0CMCg2pIcEPWM5o1D',
-'value':1.0,
-'currency':'BRL'
-}); setTimeout(function(){ window.location.href=this.href }.bind(this),200); return false;">
-💬
-</a>
-
-<!-- SCRIPT DIGITANDO -->
-<script>
-const frases = [
-"Pizza de Calabresa saindo quentinha...",
-"Frango com Catupiry bem recheado..."
-];
-
-let i = 0;
-let j = 0;
-let atual = "";
-let apagando = false;
-
-function efeitoDigitando() {
-    const elemento = document.getElementById("digitando");
-
-    if (!apagando && j < frases[i].length) {
-        atual += frases[i].charAt(j);
-        j++;
-    } else if (apagando && j > 0) {
-        atual = atual.substring(0, atual.length - 1);
-        j--;
-    }
-
-    elemento.innerHTML = atual;
-
-    if (j === frases[i].length) {
-        apagando = true;
-        setTimeout(efeitoDigitando, 1500);
-        return;
-    }
-
-    if (j === 0 && apagando) {
-        apagando = false;
-        i = (i + 1) % frases.length;
-    }
-
-    setTimeout(efeitoDigitando, apagando ? 40 : 60);
-}
-
-efeitoDigitando();
-</script>
-
-</body>
-</html>
+<p><strong>🍕 Frango com Catupiry
