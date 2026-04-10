@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Talisma Pizzaria</title>
 
+<!-- GOOGLE ADS TAG -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18014111349"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
@@ -78,7 +79,6 @@ header {
     text-decoration: none;
 }
 
-/* WHATSAPP FLUTUANTE */
 .whatsapp-float {
     position: fixed;
     bottom: 20px;
@@ -104,36 +104,31 @@ header {
   100% { transform: scale(1); }
 }
 
-/* 🔥 PROMOÇÃO (mantida com estilo + corrigida animação) */
+/* 🔥 PROMOÇÃO AJUSTADA */
 .promo {
-    background: #d62828;
-    color: #ffd60a;
+    background: #d62828; /* vermelho */
+    color: #ffd60a; /* amarelo */
     padding: 25px;
     border-radius: 12px;
     margin: 25px auto;
     max-width: 400px;
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    animation: pulsePromo 2s infinite;
 }
 
 .promo h2 {
     margin-bottom: 15px;
 }
 
-/* animação de digitação linha a linha */
-.linha {
-    opacity: 0;
-    transform: translateY(10px);
-    animation: aparecer 1s forwards;
+.promo p {
+    font-size: 18px;
+    margin: 10px 0;
 }
 
-.linha1 { animation-delay: 0.5s; }
-.linha2 { animation-delay: 1.8s; }
-
-@keyframes aparecer {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+@keyframes pulsePromo {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
 }
 
 </style>
@@ -172,19 +167,17 @@ onclick="gtag('event','conversion',{
 Ver cardápio (opcional)
 </a>
 
-<!-- PROMOÇÃO -->
+<!-- PROMOÇÃO ATUALIZADA -->
 <div class="promo">
 <h2>🔥 Promoção do Dia</h2>
 
-<div class="linha linha1">
-🍕 Pizza Calabresa Grande por R$49,90
-</div>
+<p><strong>🍕 Pizza Calabresa Grande</strong><br>
+Por R$49,90</p>
 
-<br>
+<hr>
 
-<div class="linha linha2">
-🍕 Pizza Frango Catupiry Grande por R$67,90
-</div>
+<p><strong>🍕 Pizza Frango Catupiry Grande</strong><br>
+Por R$67,90</p>
 
 </div>
 
