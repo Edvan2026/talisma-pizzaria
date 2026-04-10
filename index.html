@@ -105,16 +105,18 @@ header {
     margin: 25px auto;
     max-width: 400px;
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    transition: all 0.4s ease;
 }
 
 .promo h2 {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 #digitando {
     font-size: 18px;
     font-weight: bold;
     min-height: 24px;
+    transition: opacity 0.4s ease;
 }
 </style>
 
@@ -146,20 +148,17 @@ header {
 Ver cardápio (opcional)
 </a>
 
-<!-- PROMOÇÃO -->
 <div class="promo">
 <h2>🔥 Promoção do Dia</h2>
 <p id="digitando"></p>
 </div>
 
-<!-- BOTÃO FLUTUANTE -->
 <a class="whatsapp-float" href="https://wa.me/553438211320">
 💬
 </a>
 
 </div>
 
-<!-- ANIMAÇÃO PROMOÇÃO (CORRIGIDA) -->
 <script>
 const textos = [
 "🍕 Calabresa Grande — R$49,90",
@@ -169,15 +168,16 @@ const textos = [
 ];
 
 let i = 0;
-let el = document.getElementById("digitando");
+const el = document.getElementById("digitando");
 
 function trocarTexto() {
-    el.innerHTML = textos[i];
-    i++;
+    el.style.opacity = 0;
 
-    if (i >= textos.length) {
-        i = 0;
-    }
+    setTimeout(() => {
+        el.innerHTML = textos[i];
+        el.style.opacity = 1;
+        i = (i + 1) % textos.length;
+    }, 300);
 
     setTimeout(trocarTexto, 2500);
 }
@@ -185,4 +185,5 @@ function trocarTexto() {
 trocarTexto();
 </script>
 
-</
+</body>
+</html>
