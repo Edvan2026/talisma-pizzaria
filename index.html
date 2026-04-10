@@ -5,6 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Talisma Pizzaria</title>
 
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18014111349"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'AW-18014111349');
+</script>
+
 <style>
 body {
     font-family: Arial;
@@ -70,6 +78,7 @@ header {
     text-decoration: none;
 }
 
+/* WHATSAPP FLUTUANTE */
 .whatsapp-float {
     position: fixed;
     bottom: 20px;
@@ -84,9 +93,18 @@ header {
     align-items: center;
     justify-content: center;
     text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     z-index: 999;
+    animation: pulsar 1.5s infinite;
 }
 
+@keyframes pulsar {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.12); }
+  100% { transform: scale(1); }
+}
+
+/* 🔥 PROMOÇÃO (mantida com estilo + corrigida animação) */
 .promo {
     background: #d62828;
     color: #ffd60a;
@@ -94,13 +112,30 @@ header {
     border-radius: 12px;
     margin: 25px auto;
     max-width: 400px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
-#digitando {
-    font-size: 18px;
-    font-weight: bold;
-    min-height: 24px;
+.promo h2 {
+    margin-bottom: 15px;
 }
+
+/* animação de digitação linha a linha */
+.linha {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: aparecer 1s forwards;
+}
+
+.linha1 { animation-delay: 0.5s; }
+.linha2 { animation-delay: 1.8s; }
+
+@keyframes aparecer {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 </style>
 
 </head>
@@ -117,44 +152,53 @@ header {
 
 <h2>🍕 Peça sua pizza agora</h2>
 
-<a class="botao" href="https://wa.me/553438211320">
-📲 PEDIR NO WHATSAPP
+<a class="botao" 
+href="https://wa.me/553438211320?text=Olá%2C%20vim%20pelo%20Google%20e%20quero%20pedir%20uma%20pizza%20🍕"
+onclick="gtag('event','conversion',{
+'send_to':'AW-18014111349/xDi0CMCg2pIcEPWM5o1D',
+'value':1.0,
+'currency':'BRL'
+}); setTimeout(function(){ window.location.href=this.href }.bind(this),200); return false;">
+📲 PEDIR NO WHATSAPP AGORA
 </a>
+
+<p><strong>⚡ Atendimento rápido • Entrega em até 30 minutos</strong></p>
 
 <a class="botao-ligar" href="tel:+553438211320">
 📞 LIGAR AGORA
 </a>
 
-<a class="botao-cardapio" href="#">
-Ver cardápio
+<a class="botao-cardapio" href="https://pedido.anota.ai/loja/talisma-pizzaria-hamburgueria?f=msa&ol=r&sl=su">
+Ver cardápio (opcional)
 </a>
 
+<!-- PROMOÇÃO -->
 <div class="promo">
 <h2>🔥 Promoção do Dia</h2>
-<p id="digitando"></p>
-<p>🍕 Calabresa Grande — R$49,90</p>
-<p>🍕 Frango com Catupiry</p>
+
+<div class="linha linha1">
+🍕 Pizza Calabresa Grande por R$49,90
 </div>
 
-<a class="whatsapp-float" href="https://wa.me/553438211320">
+<br>
+
+<div class="linha linha2">
+🍕 Pizza Frango Catupiry Grande por R$67,90
+</div>
+
+</div>
+
+</div>
+
+<a href="https://wa.me/553438211320?text=Olá%2C%20vim%20pelo%20Google%20e%20quero%20pedir%20uma%20pizza%20🍕"
+class="whatsapp-float"
+onclick="gtag('event','conversion',{
+'send_to':'AW-18014111349/xDi0CMCg2pIcEPWM5o1D',
+'value':1.0,
+'currency':'BRL'
+}); setTimeout(function(){ window.location.href=this.href }.bind(this),200); return false;">
 💬
 </a>
-
-</div>
-
-<script>
-const texto = "🔥 Promoção especial hoje!";
-let i = 0;
-
-function digitar() {
-    if (i < texto.length) {
-        document.getElementById("digitando").innerHTML += texto.charAt(i);
-        i++;
-        setTimeout(digitar, 70);
-    }
-}
-digitar();
-</script>
 
 </body>
 </html>
