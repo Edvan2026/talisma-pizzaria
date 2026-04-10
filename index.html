@@ -5,9 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Talisma Pizzaria</title>
 
-
-</script>
-
 <style>
 body {
     font-family: Arial;
@@ -136,16 +133,7 @@ header {
 
 <h2>🍕 Peça sua pizza agora</h2>
 
-<a class="botao" 
-href="#"
-onclick="gtag('event','conversion',{
-'send_to':'AW-18014111349/xDi0CMCg2pIcEPWM5o1D',
-'value':1.0,
-'currency':'BRL',
-'event_callback': function() {
-  window.location.href='https://wa.me/553438211320?text=Olá%2C%20vim%20pelo%20Google%20e%20quero%20pedir%20uma%20pizza%20🍕';
-}
-}); return false;">
+<a class="botao" href="https://wa.me/553438211320?text=Olá%20vim%20pelo%20site%20e%20quero%20pedir%20uma%20pizza">
 📲 PEDIR NO WHATSAPP AGORA
 </a>
 
@@ -159,9 +147,36 @@ onclick="gtag('event','conversion',{
 Ver cardápio (opcional)
 </a>
 
+<!-- PROMOÇÃO -->
 <div class="promo">
 <h2>🔥 Promoção do Dia</h2>
 <p id="digitando"></p>
 <br>
 <p><strong>🍕 Calabresa Grande — R$49,90</strong></p>
-<p><strong>🍕 Frango com Catupiry
+<p><strong>🍕 Frango com Catupiry</strong></p>
+</div>
+
+<!-- BOTÃO FLUTUANTE -->
+<a class="whatsapp-float" href="https://wa.me/553438211320">
+💬
+</a>
+
+</div>
+
+<!-- ANIMAÇÃO DIGITANDO -->
+<script>
+const texto = "🔥 Hoje tem pizza quentinha saindo do forno!";
+let i = 0;
+
+function digitar() {
+    if (i < texto.length) {
+        document.getElementById("digitando").innerHTML += texto.charAt(i);
+        i++;
+        setTimeout(digitar, 80);
+    }
+}
+digitar();
+</script>
+
+</body>
+</html>
