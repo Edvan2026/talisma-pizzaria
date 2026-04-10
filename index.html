@@ -5,15 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Talisma Pizzaria</title>
 
-<!-- GOOGLE ADS TAG -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18014111349"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'AW-18014111349');
-</script>
-
 <style>
 body {
     font-family: Arial;
@@ -79,6 +70,7 @@ header {
     text-decoration: none;
 }
 
+/* WHATSAPP FLUTUANTE */
 .whatsapp-float {
     position: fixed;
     bottom: 20px;
@@ -104,33 +96,27 @@ header {
   100% { transform: scale(1); }
 }
 
-/* 🔥 PROMOÇÃO AJUSTADA */
+/* PROMOÇÃO */
 .promo {
-    background: #d62828; /* vermelho */
-    color: #ffd60a; /* amarelo */
+    background: #d62828;
+    color: #ffd60a;
     padding: 25px;
     border-radius: 12px;
     margin: 25px auto;
     max-width: 400px;
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
-    animation: pulsePromo 2s infinite;
 }
 
 .promo h2 {
     margin-bottom: 15px;
 }
 
-.promo p {
+/* TEXTO DIGITANDO */
+#digitando {
     font-size: 18px;
-    margin: 10px 0;
+    font-weight: bold;
+    min-height: 24px;
 }
-
-@keyframes pulsePromo {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-    100% { transform: scale(1); }
-}
-
 </style>
 
 </head>
@@ -147,13 +133,7 @@ header {
 
 <h2>🍕 Peça sua pizza agora</h2>
 
-<a class="botao" 
-href="https://wa.me/553438211320?text=Olá%2C%20vim%20pelo%20Google%20e%20quero%20pedir%20uma%20pizza%20🍕"
-onclick="gtag('event','conversion',{
-'send_to':'AW-18014111349/xDi0CMCg2pIcEPWM5o1D',
-'value':1.0,
-'currency':'BRL'
-}); setTimeout(function(){ window.location.href=this.href }.bind(this),200); return false;">
+<a class="botao" href="https://wa.me/553438211320?text=Olá%20vim%20pelo%20site%20e%20quero%20pedir%20uma%20pizza">
 📲 PEDIR NO WHATSAPP AGORA
 </a>
 
@@ -167,31 +147,36 @@ onclick="gtag('event','conversion',{
 Ver cardápio (opcional)
 </a>
 
-<!-- PROMOÇÃO ATUALIZADA -->
+<!-- PROMOÇÃO -->
 <div class="promo">
 <h2>🔥 Promoção do Dia</h2>
-
-<p><strong>🍕 Pizza Calabresa Grande</strong><br>
-Por R$49,90</p>
-
-<hr>
-
-<p><strong>🍕 Pizza Frango Catupiry Grande</strong><br>
-Por R$67,90</p>
-
+<p id="digitando"></p>
+<br>
+<p><strong>🍕 Calabresa Grande — R$49,90</strong></p>
+<p><strong>🍕 Frango com Catupiry</strong></p>
 </div>
 
-</div>
-
-<a href="https://wa.me/553438211320?text=Olá%2C%20vim%20pelo%20Google%20e%20quero%20pedir%20uma%20pizza%20🍕"
-class="whatsapp-float"
-onclick="gtag('event','conversion',{
-'send_to':'AW-18014111349/xDi0CMCg2pIcEPWM5o1D',
-'value':1.0,
-'currency':'BRL'
-}); setTimeout(function(){ window.location.href=this.href }.bind(this),200); return false;">
+<!-- BOTÃO FLUTUANTE -->
+<a class="whatsapp-float" href="https://wa.me/553438211320">
 💬
 </a>
+
+</div>
+
+<!-- ANIMAÇÃO DIGITANDO -->
+<script>
+const texto = "🔥 Hoje tem pizza quentinha saindo do forno!";
+let i = 0;
+
+function digitar() {
+    if (i < texto.length) {
+        document.getElementById("digitando").innerHTML += texto.charAt(i);
+        i++;
+        setTimeout(digitar, 80);
+    }
+}
+digitar();
+</script>
 
 </body>
 </html>
