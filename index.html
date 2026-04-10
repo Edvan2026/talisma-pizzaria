@@ -105,18 +105,17 @@ header {
     margin: 25px auto;
     max-width: 400px;
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
-    transition: all 0.4s ease;
 }
 
 .promo h2 {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
+/* TEXTO DIGITANDO */
 #digitando {
     font-size: 18px;
     font-weight: bold;
     min-height: 24px;
-    transition: opacity 0.4s ease;
 }
 </style>
 
@@ -148,41 +147,35 @@ header {
 Ver cardápio (opcional)
 </a>
 
+<!-- PROMOÇÃO -->
 <div class="promo">
 <h2>🔥 Promoção do Dia</h2>
 <p id="digitando"></p>
+<br>
+<p><strong>🍕 Calabresa Grande — R$49,90</strong></p>
+<p><strong>🍕 Frango com Catupiry</strong></p>
 </div>
 
+<!-- BOTÃO FLUTUANTE -->
 <a class="whatsapp-float" href="https://wa.me/553438211320">
 💬
 </a>
 
 </div>
 
+<!-- ANIMAÇÃO DIGITANDO -->
 <script>
-const textos = [
-"🍕 Calabresa Grande — R$49,90",
-"🍕 Frango com Catupiry",
-"🍟 Pizza + Fritas em promoção hoje!",
-"⚡ Entrega rápida em até 30 minutos"
-];
-
+const texto = "🔥 Hoje tem pizza quentinha saindo do forno!";
 let i = 0;
-const el = document.getElementById("digitando");
 
-function trocarTexto() {
-    el.style.opacity = 0;
-
-    setTimeout(() => {
-        el.innerHTML = textos[i];
-        el.style.opacity = 1;
-        i = (i + 1) % textos.length;
-    }, 300);
-
-    setTimeout(trocarTexto, 2500);
+function digitar() {
+    if (i < texto.length) {
+        document.getElementById("digitando").innerHTML += texto.charAt(i);
+        i++;
+        setTimeout(digitar, 80);
+    }
 }
-
-trocarTexto();
+digitar();
 </script>
 
 </body>
