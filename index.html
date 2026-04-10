@@ -70,7 +70,7 @@ header {
     text-decoration: none;
 }
 
-/* WHATSAPP FLUTUANTE */
+/* BOTÃO FLUTUANTE */
 .whatsapp-float {
     position: fixed;
     bottom: 20px;
@@ -80,110 +80,4 @@ header {
     background: #25D366;
     color: white;
     border-radius: 50%;
-    font-size: 28px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    z-index: 999;
-    animation: pulsar 1.5s infinite;
-}
-
-@keyframes pulsar {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.12); }
-  100% { transform: scale(1); }
-}
-
-/* PROMOÇÃO */
-.promo {
-    background: #d62828;
-    color: #ffd60a;
-    padding: 25px;
-    border-radius: 12px;
-    margin: 25px auto;
-    max-width: 400px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
-    transition: all 0.4s ease;
-}
-
-.promo h2 {
-    margin-bottom: 10px;
-}
-
-#digitando {
-    font-size: 18px;
-    font-weight: bold;
-    min-height: 24px;
-    transition: opacity 0.4s ease;
-}
-</style>
-
-</head>
-
-<body>
-
-<header>
-    <img src="logo.png" class="logo">
-    <h1>TALISMÃ PIZZARIA</h1>
-    <p>🔥 Entrega rápida • Pizza quentinha • Peça agora</p>
-</header>
-
-<div class="container">
-
-<h2>🍕 Peça sua pizza agora</h2>
-
-<a class="botao" href="https://wa.me/553438211320?text=Olá%20vim%20pelo%20site%20e%20quero%20pedir%20uma%20pizza">
-📲 PEDIR NO WHATSAPP AGORA
-</a>
-
-<p><strong>⚡ Atendimento rápido • Entrega em até 30 minutos</strong></p>
-
-<a class="botao-ligar" href="tel:+553438211320">
-📞 LIGAR AGORA
-</a>
-
-<a class="botao-cardapio" href="https://pedido.anota.ai/loja/talisma-pizzaria-hamburgueria?f=msa&ol=r&sl=su">
-Ver cardápio (opcional)
-</a>
-
-<div class="promo">
-<h2>🔥 Promoção do Dia</h2>
-<p id="digitando"></p>
-</div>
-
-<a class="whatsapp-float" href="https://wa.me/553438211320">
-💬
-</a>
-
-</div>
-
-<script>
-const textos = [
-"🍕 Calabresa Grande — R$49,90",
-"🍕 Frango com Catupiry",
-"🍟 Pizza + Fritas em promoção hoje!",
-"⚡ Entrega rápida em até 30 minutos"
-];
-
-let i = 0;
-const el = document.getElementById("digitando");
-
-function trocarTexto() {
-    el.style.opacity = 0;
-
-    setTimeout(() => {
-        el.innerHTML = textos[i];
-        el.style.opacity = 1;
-        i = (i + 1) % textos.length;
-    }, 300);
-
-    setTimeout(trocarTexto, 2500);
-}
-
-trocarTexto();
-</script>
-
-</body>
-</html>
+    font-size:
