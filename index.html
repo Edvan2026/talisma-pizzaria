@@ -70,7 +70,6 @@ header {
     text-decoration: none;
 }
 
-/* BOTÃO FLUTUANTE */
 .whatsapp-float {
     position: fixed;
     bottom: 20px;
@@ -80,4 +79,82 @@ header {
     background: #25D366;
     color: white;
     border-radius: 50%;
-    font-size:
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    z-index: 999;
+}
+
+.promo {
+    background: #d62828;
+    color: #ffd60a;
+    padding: 25px;
+    border-radius: 12px;
+    margin: 25px auto;
+    max-width: 400px;
+}
+
+#digitando {
+    font-size: 18px;
+    font-weight: bold;
+    min-height: 24px;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+    <img src="logo.png" class="logo">
+    <h1>TALISMÃ PIZZARIA</h1>
+    <p>🔥 Entrega rápida • Pizza quentinha • Peça agora</p>
+</header>
+
+<div class="container">
+
+<h2>🍕 Peça sua pizza agora</h2>
+
+<a class="botao" href="https://wa.me/553438211320">
+📲 PEDIR NO WHATSAPP
+</a>
+
+<a class="botao-ligar" href="tel:+553438211320">
+📞 LIGAR AGORA
+</a>
+
+<a class="botao-cardapio" href="#">
+Ver cardápio
+</a>
+
+<div class="promo">
+<h2>🔥 Promoção do Dia</h2>
+<p id="digitando"></p>
+<p>🍕 Calabresa Grande — R$49,90</p>
+<p>🍕 Frango com Catupiry</p>
+</div>
+
+<a class="whatsapp-float" href="https://wa.me/553438211320">
+💬
+</a>
+
+</div>
+
+<script>
+const texto = "🔥 Promoção especial hoje!";
+let i = 0;
+
+function digitar() {
+    if (i < texto.length) {
+        document.getElementById("digitando").innerHTML += texto.charAt(i);
+        i++;
+        setTimeout(digitar, 70);
+    }
+}
+digitar();
+</script>
+
+</body>
+</html>
