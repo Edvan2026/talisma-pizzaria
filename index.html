@@ -5,12 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Talisma Pizzaria</title>
 
-<script src="https://www.googletagmanager.com/gtag/js?id=AW-18014111349"></script>
+<!-- GOOGLE ADS CONVERSÃO (APENAS EVENTO) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18014111349"></script>
+
 <script>
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
+
+/* NÃO precisa de config se você usa GTM corretamente */
 gtag('js', new Date());
-gtag('config', 'AW-18014111349');
 </script>
 
 <style>
@@ -103,28 +106,6 @@ header {
   50% { transform: scale(1.12); }
   100% { transform: scale(1); }
 }
-
-/* PROMOÇÃO */
-.promo {
-    background: #d62828;
-    color: #ffd60a;
-    padding: 25px;
-    border-radius: 12px;
-    margin: 25px auto;
-    max-width: 400px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
-}
-
-.promo h2 {
-    margin-bottom: 15px;
-}
-
-/* TEXTO DIGITANDO */
-#digitando {
-    font-size: 18px;
-    font-weight: bold;
-    min-height: 24px;
-}
 </style>
 
 </head>
@@ -141,6 +122,7 @@ header {
 
 <h2>🍕 Peça sua pizza agora</h2>
 
+<!-- CONVERSÃO GOOGLE ADS (CORRETA) -->
 <a class="botao" 
 href="#"
 onclick="gtag('event','conversion',{
@@ -164,9 +146,7 @@ onclick="gtag('event','conversion',{
 Ver cardápio (opcional)
 </a>
 
-<div class="promo">
-<h2>🔥 Promoção do Dia</h2>
-<p id="digitando"></p>
-<br>
-<p><strong>🍕 Calabresa Grande — R$49,90</strong></p>
-<p><strong>🍕 Frango com Catupiry
+</div>
+
+</body>
+</html>
