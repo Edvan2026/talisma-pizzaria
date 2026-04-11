@@ -88,13 +88,14 @@ header {
 }
 
 .promo h2 {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    color: #ffd60a;
 }
 
-#digitando {
+.pizza-item {
     font-size: 18px;
     font-weight: bold;
-    min-height: 40px;
+    margin: 15px 0;
 }
 </style>
 </head>
@@ -122,10 +123,11 @@ header {
 <div class="promo">
     <h2>🔥 PROMOÇÃO DO DIA</h2>
 
-    <div id="digitando"></div>
+    <div class="pizza-item">
+        🍕 Calabresa Grande — R$49,90
+    </div>
 
-    <div style="margin-top:15px; font-weight:bold;">
-        🍕 Calabresa Grande — R$49,90<br><br>
+    <div class="pizza-item">
         🍕 Frango com Catupiry — R$67,90
     </div>
 </div>
@@ -136,42 +138,6 @@ header {
 <a class="whatsapp-float" href="https://wa.me/553438211320" target="_blank">
 💬
 </a>
-
-<script>
-const frases = [
-"🔥 Promoção imperdível saindo do forno...",
-"🍕 Pizza quentinha feita na hora...",
-"⚡ Peça agora pelo WhatsApp e receba rápido!"
-];
-
-let index = 0;
-let char = 0;
-let apagando = false;
-
-function digitarLoop() {
-    const el = document.getElementById("digitando");
-    let texto = frases[index];
-
-    if (!apagando) {
-        el.innerHTML = texto.substring(0, char++);
-        if (char > texto.length) {
-            apagando = true;
-            setTimeout(digitarLoop, 1200);
-            return;
-        }
-    } else {
-        el.innerHTML = texto.substring(0, char--);
-        if (char < 0) {
-            apagando = false;
-            index = (index + 1) % frases.length;
-        }
-    }
-
-    setTimeout(digitarLoop, apagando ? 30 : 60);
-}
-
-digitarLoop();
-</script>
 
 </body>
 </html>
