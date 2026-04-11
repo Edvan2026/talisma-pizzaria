@@ -91,11 +91,11 @@ header {
     margin-bottom: 10px;
 }
 
-/* TEXTO DIGITANDO */
 #digitando {
     font-size: 18px;
     font-weight: bold;
-    min-height: 25px;
+    min-height: 60px;
+    line-height: 1.6;
 }
 </style>
 </head>
@@ -122,7 +122,7 @@ header {
 <!-- PROMOÇÃO -->
 <div class="promo">
     <h2>🔥 PROMOÇÃO DO DIA</h2>
-    <p id="digitando"></p>
+    <div id="digitando"></div>
 </div>
 
 </div>
@@ -133,14 +133,27 @@ header {
 </a>
 
 <script>
-const texto = "🍕 Calabresa Grande R$49,90 • Frango com Catupiry R$67,90";
+const texto = [
+"🍕 Calabresa Grande — R$49,90",
+"",
+"🍕 Frango com Catupiry — R$67,90"
+];
+
 let i = 0;
+let j = 0;
 
 function digitar() {
     if (i < texto.length) {
-        document.getElementById("digitando").innerHTML += texto.charAt(i);
-        i++;
-        setTimeout(digitar, 70);
+        if (j < texto[i].length) {
+            document.getElementById("digitando").innerHTML += texto[i].charAt(j);
+            j++;
+            setTimeout(digitar, 50);
+        } else {
+            document.getElementById("digitando").innerHTML += "<br>";
+            i++;
+            j = 0;
+            setTimeout(digitar, 300);
+        }
     }
 }
 
