@@ -94,7 +94,7 @@ header {
 #digitando {
     font-size: 18px;
     font-weight: bold;
-    min-height: 30px;
+    min-height: 40px;
 }
 </style>
 </head>
@@ -138,36 +138,39 @@ header {
 </a>
 
 <script>
-const textos = [
+const frases = [
 "🔥 Promoção imperdível saindo do forno...",
-"🍕 Aproveite enquanto ainda está quente...",
-"⚡ Pedido rápido pelo WhatsApp!"
+"🍕 Pizza quentinha feita na hora...",
+"⚡ Peça agora pelo WhatsApp e receba rápido!"
 ];
 
-let i = 0;
+let index = 0;
+let char = 0;
+let apagando = false;
 
-function loopTexto() {
-    let texto = textos[i];
-    let el = document.getElementById("digitando");
-    el.innerHTML = "";
+function digitarLoop() {
+    const el = document.getElementById("digitando");
+    let texto = frases[index];
 
-    let j = 0;
-
-    let escrever = setInterval(() => {
-        if (j < texto.length) {
-            el.innerHTML += texto[j];
-            j++;
-        } else {
-            clearInterval(escrever);
-            setTimeout(() => {
-                i = (i + 1) % textos.length;
-                loopTexto();
-            }, 1000);
+    if (!apagando) {
+        el.innerHTML = texto.substring(0, char++);
+        if (char > texto.length) {
+            apagando = true;
+            setTimeout(digitarLoop, 1200);
+            return;
         }
-    }, 60);
+    } else {
+        el.innerHTML = texto.substring(0, char--);
+        if (char < 0) {
+            apagando = false;
+            index = (index + 1) % frases.length;
+        }
+    }
+
+    setTimeout(digitarLoop, apagando ? 30 : 60);
 }
 
-loopTexto();
+digitarLoop();
 </script>
 
 </body>
