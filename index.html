@@ -52,31 +52,13 @@ header {
     font-weight: bold;
 }
 
-/* LINK DISCRETO CARDÁPIO */
+/* LINK CARDÁPIO */
 .link-cardapio {
     display: block;
     margin: 8px auto 20px auto;
     font-size: 13px;
     color: #555;
     text-decoration: underline;
-}
-
-/* FLUTUANTE */
-.whatsapp-float {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 65px;
-    height: 65px;
-    background: #25D366;
-    color: white;
-    border-radius: 50%;
-    font-size: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
 /* PROMOÇÃO */
@@ -107,6 +89,25 @@ header {
     font-size: 18px;
     font-weight: bold;
     margin: 10px 0;
+}
+
+/* 🔥 BOTÃO FLUTUANTE CORRIGIDO */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 65px;
+    height: 65px;
+    background: #25D366;
+    color: white;
+    border-radius: 50%;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    z-index: 9999;
 }
 </style>
 </head>
@@ -155,7 +156,7 @@ header {
 
 </div>
 
-<!-- BOTÃO FLUTUANTE -->
+<!-- 🔥 BOTÃO FLUTUANTE -->
 <a class="whatsapp-float" href="https://wa.me/553438211320" target="_blank">
 💬
 </a>
