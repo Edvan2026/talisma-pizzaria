@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -5,15 +6,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Talisma Pizzaria</title>
 
-<!-- Google Tag Manager -->
+<!-- Google Ads (Conversão) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18014111349"></script>
 <script>
-(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id=GTM-KQTQM4JS'+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-KQTQM4JS');
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-18014111349');
 </script>
-<!-- End Google Tag Manager -->
 
 <style>
 body {
@@ -133,11 +134,6 @@ header {
 
 <body>
 
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KQTQM4JS"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-
 <header>
     <img src="logo.png" class="logo">
     <h1>TALISMÃ PIZZARIA</h1>
@@ -148,8 +144,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <h2>🍕 Peça sua pizza agora</h2>
 
-<!-- BOTÃO CORRIGIDO -->
-<a class="botao" href="https://wa.me/553438211320" target="_blank">
+<!-- BOTÃO WHATSAPP COM CONVERSÃO -->
+<a class="botao" href="https://wa.me/553438211320" target="_blank" onclick="enviarConversao()">
 📲 PEDIR NO WHATSAPP AGORA
 </a>
 
@@ -171,7 +167,7 @@ Ver cardápio (opcional)
 <p><strong>🍕 Frango com Catupiry</strong></p>
 </div>
 
-<a class="whatsapp-float" href="https://wa.me/553438211320" target="_blank">
+<a class="whatsapp-float" href="https://wa.me/553438211320" target="_blank" onclick="enviarConversao()">
 💬
 </a>
 
@@ -191,5 +187,15 @@ function digitar() {
 digitar();
 </script>
 
+<!-- SCRIPT DE CONVERSÃO -->
+<script>
+function enviarConversao() {
+  gtag('event', 'conversion', {
+    'send_to': 'AW-18014111349/xDi0CMCg2pIcEPWM5o1D'
+  });
+}
+</script>
+
 </body>
 </html>
+```
