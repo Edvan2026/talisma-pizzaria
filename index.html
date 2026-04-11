@@ -6,16 +6,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Talisma Pizzaria</title>
 
-<!-- Google Ads (Conversão) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18014111349"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-18014111349');
-</script>
-
 <style>
 body {
     font-family: Arial;
@@ -144,8 +134,8 @@ header {
 
 <h2>🍕 Peça sua pizza agora</h2>
 
-<!-- BOTÃO WHATSAPP CORRIGIDO -->
-<a class="botao" href="#" onclick="enviarConversaoWhats()">
+<!-- BOTÃO WHATSAPP SIMPLES (FUNCIONA) -->
+<a class="botao" href="https://wa.me/553438211320" target="_blank">
 📲 PEDIR NO WHATSAPP AGORA
 </a>
 
@@ -168,7 +158,7 @@ Ver cardápio (opcional)
 </div>
 
 <!-- BOTÃO FLUTUANTE -->
-<a class="whatsapp-float" href="#" onclick="enviarConversaoWhats()">
+<a class="whatsapp-float" href="https://wa.me/553438211320" target="_blank">
 💬
 </a>
 
@@ -186,21 +176,6 @@ function digitar() {
     }
 }
 digitar();
-</script>
-
-<!-- SCRIPT DE CONVERSÃO COM TEMPO -->
-<script>
-function enviarConversaoWhats() {
-
-  gtag('event', 'conversion', {
-    'send_to': 'AW-18014111349/xDi0CMCg2pIcEPWM5o1D'
-  });
-
-  // Espera antes de abrir o WhatsApp
-  setTimeout(function() {
-    window.open('https://wa.me/553438211320', '_blank');
-  }, 1000);
-}
 </script>
 
 </body>
