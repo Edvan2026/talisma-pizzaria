@@ -6,16 +6,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Talisma Pizzaria</title>
 
-<!-- GOOGLE ADS TAG -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18014111349"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-18014111349');
-</script>
-
 <style>
 body {
     font-family: Arial;
@@ -52,7 +42,6 @@ header {
     border-radius: 12px;
     text-decoration: none;
     font-weight: bold;
-    cursor: pointer;
 }
 
 .botao-ligar {
@@ -69,19 +58,6 @@ header {
     font-weight: bold;
 }
 
-.botao-cardapio {
-    display: block;
-    background: #ccc;
-    color: #333;
-    padding: 12px;
-    margin: 10px auto;
-    width: 90%;
-    max-width: 350px;
-    font-size: 14px;
-    border-radius: 8px;
-    text-decoration: none;
-}
-
 .whatsapp-float {
     position: fixed;
     bottom: 20px;
@@ -96,24 +72,9 @@ header {
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
-.promo {
-    background: #d62828;
-    color: #ffd60a;
-    padding: 25px;
-    border-radius: 12px;
-    margin: 25px auto;
-    max-width: 400px;
-}
-
-#digitando {
-    font-size: 18px;
-    font-weight: bold;
-}
 </style>
-
 </head>
 
 <body>
@@ -121,71 +82,28 @@ header {
 <header>
     <img src="logo.png" class="logo">
     <h1>TALISMÃ PIZZARIA</h1>
-    <p>🔥 Entrega rápida • Pizza quentinha • Peça agora</p>
+    <p>🔥 Entrega rápida • Pizza quentinha</p>
 </header>
 
 <div class="container">
 
-<h2>🍕 Peça sua pizza agora</h2>
+<h2>🍕 Peça agora pelo WhatsApp</h2>
 
-<!-- BOTÃO WHATSAPP COM CONVERSÃO -->
-<a class="botao" onclick="enviarConversaoWhats()">
-📲 PEDIR NO WHATSAPP AGORA
+<!-- BOTÃO PRINCIPAL -->
+<a class="botao" href="/whatsapp.html">
+📲 PEDIR NO WHATSAPP
 </a>
-
-<p><strong>⚡ Atendimento rápido • Entrega em até 30 minutos</strong></p>
 
 <a class="botao-ligar" href="tel:+553438211320">
 📞 LIGAR AGORA
 </a>
 
-<a class="botao-cardapio" href="https://pedido.anota.ai/loja/talisma-pizzaria-hamburgueria?f=msa&ol=r&sl=su">
-Ver cardápio
-</a>
-
-<div class="promo">
-<h2>🔥 Promoção do Dia</h2>
-<p id="digitando"></p>
 </div>
 
 <!-- BOTÃO FLUTUANTE -->
-<a class="whatsapp-float" onclick="enviarConversaoWhats()">
+<a class="whatsapp-float" href="/whatsapp.html">
 💬
 </a>
-
-</div>
-
-<script>
-const texto = "🔥 Hoje tem pizza quentinha saindo do forno!";
-let i = 0;
-
-function digitar() {
-    if (i < texto.length) {
-        document.getElementById("digitando").innerHTML += texto.charAt(i);
-        i++;
-        setTimeout(digitar, 80);
-    }
-}
-digitar();
-</script>
-
-<!-- SCRIPT DE CONVERSÃO CORRETO -->
-<script>
-function enviarConversaoWhats() {
-  var url = "https://wa.me/553438211320";
-
-  var callback = function () {
-    window.open(url, '_blank');
-  };
-
-  gtag('event', 'conversion', {
-    'send_to': 'AW-18014111349/7oPOCI_gspkcEPWM5o1D',
-    'event_callback': callback
-  });
-
-  setTimeout(callback, 1500);
-}
-</script>
 
 </body>
 </html>
