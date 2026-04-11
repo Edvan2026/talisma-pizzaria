@@ -144,8 +144,8 @@ header {
 
 <h2>🍕 Peça sua pizza agora</h2>
 
-<!-- BOTÃO WHATSAPP COM CONVERSÃO -->
-<a class="botao" href="https://wa.me/553438211320" target="_blank" onclick="enviarConversao()">
+<!-- BOTÃO WHATSAPP CORRIGIDO -->
+<a class="botao" href="#" onclick="enviarConversaoWhats()">
 📲 PEDIR NO WHATSAPP AGORA
 </a>
 
@@ -167,7 +167,8 @@ Ver cardápio (opcional)
 <p><strong>🍕 Frango com Catupiry</strong></p>
 </div>
 
-<a class="whatsapp-float" href="https://wa.me/553438211320" target="_blank" onclick="enviarConversao()">
+<!-- BOTÃO FLUTUANTE -->
+<a class="whatsapp-float" href="#" onclick="enviarConversaoWhats()">
 💬
 </a>
 
@@ -187,12 +188,18 @@ function digitar() {
 digitar();
 </script>
 
-<!-- SCRIPT DE CONVERSÃO -->
+<!-- SCRIPT DE CONVERSÃO COM TEMPO -->
 <script>
-function enviarConversao() {
+function enviarConversaoWhats() {
+
   gtag('event', 'conversion', {
     'send_to': 'AW-18014111349/xDi0CMCg2pIcEPWM5o1D'
   });
+
+  // Espera antes de abrir o WhatsApp
+  setTimeout(function() {
+    window.open('https://wa.me/553438211320', '_blank');
+  }, 1000);
 }
 </script>
 
