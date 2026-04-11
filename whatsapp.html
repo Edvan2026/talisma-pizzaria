@@ -94,8 +94,15 @@ header {
 #digitando {
     font-size: 18px;
     font-weight: bold;
-    min-height: 60px;
-    line-height: 1.6;
+    min-height: 30px;
+}
+
+/* FIXO ABAIXO */
+.pizza {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #fff;
 }
 </style>
 </head>
@@ -122,7 +129,14 @@ header {
 <!-- PROMOÇÃO -->
 <div class="promo">
     <h2>🔥 PROMOÇÃO DO DIA</h2>
+
     <div id="digitando"></div>
+
+    <!-- FIXO -->
+    <div class="pizza">
+        🍕 Calabresa Grande — R$49,90<br><br>
+        🍕 Frango com Catupiry — R$67,90
+    </div>
 </div>
 
 </div>
@@ -133,28 +147,22 @@ header {
 </a>
 
 <script>
-const texto = [
-"🍕 Calabresa Grande — R$49,90",
-"",
-"🍕 Frango com Catupiry — R$67,90"
-];
-
+const texto = "🔥 Hoje tem promoção especial saindo do forno...";
 let i = 0;
-let j = 0;
 
 function digitar() {
-    if (i < texto.length) {
-        if (j < texto[i].length) {
-            document.getElementById("digitando").innerHTML += texto[i].charAt(j);
-            j++;
-            setTimeout(digitar, 50);
-        } else {
-            document.getElementById("digitando").innerHTML += "<br>";
+    document.getElementById("digitando").innerHTML = "";
+
+    let intervalo = setInterval(() => {
+        if (i < texto.length) {
+            document.getElementById("digitando").innerHTML += texto.charAt(i);
             i++;
-            j = 0;
-            setTimeout(digitar, 300);
+        } else {
+            clearInterval(intervalo);
+            i = 0;
+            setTimeout(digitar, 1200); // reinicia depois de pausa
         }
-    }
+    }, 80);
 }
 
 digitar();
