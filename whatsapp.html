@@ -96,14 +96,6 @@ header {
     font-weight: bold;
     min-height: 30px;
 }
-
-/* FIXO ABAIXO */
-.pizza {
-    font-size: 18px;
-    font-weight: bold;
-    margin-top: 15px;
-    color: #fff;
-}
 </style>
 </head>
 
@@ -132,8 +124,7 @@ header {
 
     <div id="digitando"></div>
 
-    <!-- FIXO -->
-    <div class="pizza">
+    <div style="margin-top:15px; font-weight:bold;">
         🍕 Calabresa Grande — R$49,90<br><br>
         🍕 Frango com Catupiry — R$67,90
     </div>
@@ -147,25 +138,36 @@ header {
 </a>
 
 <script>
-const texto = "🔥 Hoje tem promoção especial saindo do forno...";
+const textos = [
+"🔥 Promoção imperdível saindo do forno...",
+"🍕 Aproveite enquanto ainda está quente...",
+"⚡ Pedido rápido pelo WhatsApp!"
+];
+
 let i = 0;
 
-function digitar() {
-    document.getElementById("digitando").innerHTML = "";
+function loopTexto() {
+    let texto = textos[i];
+    let el = document.getElementById("digitando");
+    el.innerHTML = "";
 
-    let intervalo = setInterval(() => {
-        if (i < texto.length) {
-            document.getElementById("digitando").innerHTML += texto.charAt(i);
-            i++;
+    let j = 0;
+
+    let escrever = setInterval(() => {
+        if (j < texto.length) {
+            el.innerHTML += texto[j];
+            j++;
         } else {
-            clearInterval(intervalo);
-            i = 0;
-            setTimeout(digitar, 1200); // reinicia depois de pausa
+            clearInterval(escrever);
+            setTimeout(() => {
+                i = (i + 1) % textos.length;
+                loopTexto();
+            }, 1000);
         }
-    }, 80);
+    }, 60);
 }
 
-digitar();
+loopTexto();
 </script>
 
 </body>
