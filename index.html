@@ -1,1 +1,200 @@
-<!DOCTYPE html> <html lang="pt-br"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Talisma Pizzaria</title> <!-- Google Tag Manager --> <script> (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id=GTM-KQTQM4JS'+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-KQTQM4JS'); </script> <!-- End Google Tag Manager --> <style> body { font-family: Arial; margin: 0; text-align: center; background: #f2f2f2; } header { background: #0d3b66; color: white; padding: 25px 20px; } .logo { width: 110px; display: block; margin: 0 auto 10px auto; } .container { padding: 20px; } .botao { display: block; background: #25D366; color: white; padding: 20px; margin: 15px auto; width: 90%; max-width: 350px; font-size: 20px; border-radius: 12px; text-decoration: none; font-weight: bold; } .botao-ligar { display: block; background: #0984e3; color: white; padding: 16px; margin: 10px auto; width: 90%; max-width: 350px; font-size: 16px; border-radius: 10px; text-decoration: none; font-weight: bold; } .botao-cardapio { display: block; background: #ccc; color: #333; padding: 12px; margin: 10px auto; width: 90%; max-width: 350px; font-size: 14px; border-radius: 8px; text-decoration: none; } /* WHATSAPP FLUTUANTE */ .whatsapp-float { position: fixed; bottom: 20px; right: 20px; width: 65px; height: 65px; background: #25D366; color: white; border-radius: 50%; font-size: 28px; display: flex; align-items: center; justify-content: center; text-decoration: none; box-shadow: 0 4px 10px rgba(0,0,0,0.3); z-index: 999; animation: pulsar 1.5s infinite; } @keyframes pulsar { 0% { transform: scale(1); } 50% { transform: scale(1.12); } 100% { transform: scale(1); } } /* PROMOÇÃO */ .promo { background: #d62828; color: #ffd60a; padding: 25px; border-radius: 12px; margin: 25px auto; max-width: 400px; box-shadow: 0 0 15px rgba(0,0,0,0.2); } .promo h2 { margin-bottom: 15px; } /* TEXTO DIGITANDO */ #digitando { font-size: 18px; font-weight: bold; min-height: 24px; } </style> </head> <body> <!-- Google Tag Manager (noscript) --> <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KQTQM4JS" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> <!-- End Google Tag Manager (noscript) --> <header> <img src="logo.png" class="logo"> <h1>TALISMÃ PIZZARIA</h1> <p>🔥 Entrega rápida • Pizza quentinha • Peça agora</p> </header> <div class="container"> <h2>🍕 Peça sua pizza agora</h2> <a class="botao" href="https://wa.me/553438211320?text=Olá%20vim%20pelo%20site%20e%20quero%20pedir%20uma%20pizza"> 📲 PEDIR NO WHATSAPP AGORA </a> <p><strong>⚡ Atendimento rápido • Entrega em até 30 minutos</strong></p> <a class="botao-ligar" href="tel:+553438211320"> 📞 LIGAR AGORA </a> <a class="botao-cardapio" href="https://pedido.anota.ai/loja/talisma-pizzaria-hamburgueria?f=msa&ol=r&sl=su"> Ver cardápio (opcional) </a> <div class="promo"> <h2>🔥 Promoção do Dia</h2> <p id="digitando"></p> <br> <p><strong>🍕 Calabresa Grande — R$49,90</strong></p> <p><strong>🍕 Frango com Catupiry</strong></p> </div> <a class="whatsapp-float" href="https://wa.me/553438211320"> 💬 </a> </div> <script> const texto = "🔥 Hoje tem pizza quentinha saindo do forno!"; let i = 0; function digitar() { if (i < texto.length) { document.getElementById("digitando").innerHTML += texto.charAt(i); i++; setTimeout(digitar, 80); } } digitar(); </script> </body> </html>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TALISMÃ PIZZARIA</title>
+
+<style>
+body {
+    font-family: Arial;
+    margin: 0;
+    text-align: center;
+    background: #f2f2f2;
+}
+
+header {
+    background: #0d3b66;
+    color: white;
+    padding: 25px 20px;
+}
+
+.container {
+    padding: 20px;
+}
+
+/* BOTÕES */
+.botao {
+    display: block;
+    background: #25D366;
+    color: white;
+    padding: 20px;
+    margin: 15px auto;
+    width: 90%;
+    max-width: 350px;
+    font-size: 20px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.botao-ligar {
+    display: block;
+    background: #0984e3;
+    color: white;
+    padding: 16px;
+    margin: 10px auto;
+    width: 90%;
+    max-width: 350px;
+    font-size: 16px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* LINK DISCRETO CARDÁPIO */
+.link-cardapio {
+    display: block;
+    margin: 8px auto 20px auto;
+    font-size: 13px;
+    color: #555;
+    text-decoration: underline;
+}
+
+/* FLUTUANTE */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 65px;
+    height: 65px;
+    background: #25D366;
+    color: white;
+    border-radius: 50%;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* PROMOÇÃO */
+.promo {
+    background: #d62828;
+    color: #ffd60a;
+    padding: 25px;
+    margin: 25px auto;
+    max-width: 420px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.promo h2 {
+    margin-bottom: 10px;
+}
+
+/* TEXTO DIGITANDO */
+#digitando {
+    font-size: 16px;
+    font-weight: bold;
+    min-height: 30px;
+    margin-bottom: 15px;
+}
+
+/* ITENS FIXOS */
+.pizza-item {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <img src="logo.png" style="width:110px; margin-bottom:10px;">
+    <h1>TALISMÃ PIZZARIA</h1>
+    <p>🔥 Entrega rápida • Pizza quentinha</p>
+</header>
+
+<div class="container">
+
+<h2>🍕 Peça agora pelo WhatsApp</h2>
+
+<a class="botao" href="https://wa.me/553438211320" target="_blank">
+📲 PEDIR NO WHATSAPP
+</a>
+
+<a class="botao-ligar" href="tel:+553438211320">
+📞 LIGAR AGORA
+</a>
+
+<!-- LINK CARDÁPIO DISCRETO -->
+<a class="link-cardapio" href="https://pedido.anota.ai" target="_blank">
+📋 Ver cardápio completo
+</a>
+
+<!-- PROMOÇÃO -->
+<div class="promo">
+
+    <h2>🔥 PROMOÇÃO DO DIA</h2>
+
+    <div id="digitando"></div>
+
+    <div class="pizza-item">
+        🍕 Calabresa Grande — R$49,90
+    </div>
+
+    <div class="pizza-item">
+        🍕 Frango com Catupiry — R$67,90
+    </div>
+
+</div>
+
+</div>
+
+<!-- BOTÃO FLUTUANTE -->
+<a class="whatsapp-float" href="https://wa.me/553438211320" target="_blank">
+💬
+</a>
+
+<script>
+const frases = [
+"🔥 Promoção fresquinha saindo do forno...",
+"🍕 Só hoje com preço especial!",
+"⚡ Corre que acaba rápido!"
+];
+
+let i = 0;
+let j = 0;
+let apagando = false;
+
+function loop() {
+    const el = document.getElementById("digitando");
+    const texto = frases[i];
+
+    if (!apagando) {
+        el.innerHTML = texto.substring(0, j++);
+        if (j > texto.length) {
+            apagando = true;
+            setTimeout(loop, 1200);
+            return;
+        }
+    } else {
+        el.innerHTML = texto.substring(0, j--);
+        if (j < 0) {
+            apagando = false;
+            i = (i + 1) % frases.length;
+        }
+    }
+
+    setTimeout(loop, apagando ? 40 : 70);
+}
+
+loop();
+</script>
+
+</body>
+</html>
