@@ -13,31 +13,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id=GTM-KQTQM4JS'+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-KQTQM4JS');
 </script>
-<!-- End Google Tag Manager -->
 
 <style>
-body {
-    font-family: Arial;
-    margin: 0;
-    text-align: center;
-    background: #f2f2f2;
-}
-
-header {
-    background: #0d3b66;
-    color: white;
-    padding: 25px 20px;
-}
-
-.logo {
-    width: 110px;
-    display: block;
-    margin: 0 auto 10px auto;
-}
-
-.container {
-    padding: 20px;
-}
+body { font-family: Arial; margin: 0; text-align: center; background: #f2f2f2; }
+header { background: #0d3b66; color: white; padding: 25px 20px; }
+.logo { width: 110px; display: block; margin: 0 auto 10px auto; }
+.container { padding: 20px; }
 
 .botao {
     display: block;
@@ -80,7 +61,7 @@ header {
     text-decoration: none;
 }
 
-/* WHATSAPP FLUTUANTE */
+/* Botão flutuante */
 .whatsapp-float {
     position: fixed;
     bottom: 20px;
@@ -96,17 +77,9 @@ header {
     justify-content: center;
     text-decoration: none;
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    z-index: 999;
-    animation: pulsar 1.5s infinite;
 }
 
-@keyframes pulsar {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.12); }
-  100% { transform: scale(1); }
-}
-
-/* PROMOÇÃO */
+/* Promo */
 .promo {
     background: #d62828;
     color: #ffd60a;
@@ -114,29 +87,12 @@ header {
     border-radius: 12px;
     margin: 25px auto;
     max-width: 400px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
-.promo h2 {
-    margin-bottom: 15px;
-}
-
-/* TEXTO DIGITANDO */
-#digitando {
-    font-size: 18px;
-    font-weight: bold;
-    min-height: 24px;
-}
 </style>
-
 </head>
 
 <body>
-
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KQTQM4JS"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
 
 <header>
     <img src="logo.png" class="logo">
@@ -148,7 +104,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <h2>🍕 Peça sua pizza agora</h2>
 
-<a class="botao" href="https://wa.me/553438211320?text=Olá%20vim%20pelo%20site%20e%20quero%20pedir%20uma%20pizza">
+<!-- BOTÃO CORRIGIDO -->
+<a class="botao" href="/pedido.html">
 📲 PEDIR NO WHATSAPP AGORA
 </a>
 
@@ -158,37 +115,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 📞 LIGAR AGORA
 </a>
 
-<a class="botao-cardapio" href="https://pedido.anota.ai/loja/talisma-pizzaria-hamburgueria?f=msa&ol=r&sl=su">
-Ver cardápio (opcional)
+<a class="botao-cardapio" href="https://pedido.anota.ai/loja/talisma-pizzaria-hamburgueria">
+Ver cardápio
 </a>
 
 <div class="promo">
 <h2>🔥 Promoção do Dia</h2>
-<p id="digitando"></p>
-<br>
-<p><strong>🍕 Calabresa Grande — R$49,90</strong></p>
-<p><strong>🍕 Frango com Catupiry</strong></p>
+<p>🍕 Calabresa Grande — R$49,90</p>
+<p>🍕 Frango com Catupiry</p>
 </div>
 
-<a class="whatsapp-float" href="https://wa.me/553438211320">
+<!-- BOTÃO FLUTUANTE CORRIGIDO -->
+<a class="whatsapp-float" href="/pedido.html">
 💬
 </a>
 
 </div>
-
-<script>
-const texto = "🔥 Hoje tem pizza quentinha saindo do forno!";
-let i = 0;
-
-function digitar() {
-    if (i < texto.length) {
-        document.getElementById("digitando").innerHTML += texto.charAt(i);
-        i++;
-        setTimeout(digitar, 80);
-    }
-}
-digitar();
-</script>
 
 </body>
 </html>
