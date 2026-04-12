@@ -23,7 +23,6 @@ header {
     padding: 20px;
 }
 
-/* BOTÕES */
 .botao {
     display: block;
     background: #25D366;
@@ -52,7 +51,6 @@ header {
     font-weight: bold;
 }
 
-/* LINK CARDÁPIO */
 .link-cardapio {
     display: block;
     margin: 8px auto 20px auto;
@@ -61,37 +59,6 @@ header {
     text-decoration: underline;
 }
 
-/* PROMOÇÃO */
-.promo {
-    background: #d62828;
-    color: #ffd60a;
-    padding: 25px;
-    margin: 25px auto;
-    max-width: 420px;
-    border-radius: 12px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
-}
-
-.promo h2 {
-    margin-bottom: 10px;
-}
-
-/* TEXTO DIGITANDO */
-#digitando {
-    font-size: 16px;
-    font-weight: bold;
-    min-height: 30px;
-    margin-bottom: 15px;
-}
-
-/* ITENS FIXOS */
-.pizza-item {
-    font-size: 18px;
-    font-weight: bold;
-    margin: 10px 0;
-}
-
-/* 🔥 BOTÃO FLUTUANTE CORRIGIDO */
 .whatsapp-float {
     position: fixed;
     bottom: 20px;
@@ -107,7 +74,33 @@ header {
     justify-content: center;
     text-decoration: none;
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    z-index: 9999;
+}
+
+.promo {
+    background: #d62828;
+    color: #ffd60a;
+    padding: 25px;
+    margin: 25px auto;
+    max-width: 420px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.promo h2 {
+    margin-bottom: 10px;
+}
+
+#digitando {
+    font-size: 16px;
+    font-weight: bold;
+    min-height: 30px;
+    margin-bottom: 15px;
+}
+
+.pizza-item {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
 }
 </style>
 </head>
@@ -124,7 +117,8 @@ header {
 
 <h2>🍕 Peça agora pelo WhatsApp</h2>
 
-<a class="botao" href="https://wa.me/553438211320" target="_blank">
+<a class="botao" href="https://wa.me/553438211320" target="_blank"
+onclick="console.log('Clique WhatsApp')">
 📲 PEDIR NO WHATSAPP
 </a>
 
@@ -132,12 +126,10 @@ header {
 📞 LIGAR AGORA
 </a>
 
-<!-- LINK CARDÁPIO DISCRETO -->
 <a class="link-cardapio" href="https://pedido.anota.ai" target="_blank">
 📋 Ver cardápio completo
 </a>
 
-<!-- PROMOÇÃO -->
 <div class="promo">
 
     <h2>🔥 PROMOÇÃO DO DIA</h2>
@@ -156,8 +148,8 @@ header {
 
 </div>
 
-<!-- 🔥 BOTÃO FLUTUANTE -->
-<a class="whatsapp-float" href="https://wa.me/553438211320" target="_blank">
+<a class="whatsapp-float" href="https://wa.me/553438211320" target="_blank"
+onclick="console.log('Clique WhatsApp Float')">
 💬
 </a>
 
