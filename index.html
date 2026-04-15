@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>TALISMÃ PIZZARIA</title>
 
-<!-- GOOGLE TAG (CONVERSÃO) -->
+<!-- GOOGLE TAG -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18014111349"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
@@ -127,12 +127,18 @@ header {
 
 <h2>🍕 Peça agora pelo WhatsApp</h2>
 
-<!-- BOTÃO WHATSAPP -->
+<!-- BOTÃO WHATSAPP COM DELAY -->
 <a class="botao"
-href="https://wa.me/553438211320?text=Olá%20vim%20do%20Google%20e%20quero%20pedir%20pizza"
-onclick="gtag('event', 'conversion', {
+href="#"
+onclick="
+gtag('event', 'conversion', {
   'send_to': 'AW-18014111349/xDi0CMCg2pIcEPWM5o1D'
-});">
+});
+setTimeout(function(){
+  window.location.href='https://wa.me/553438211320?text=Olá%20vim%20do%20Google%20e%20quero%20pedir%20pizza';
+},150);
+return false;
+">
 📲 PEDIR NO WHATSAPP
 </a>
 
@@ -165,12 +171,18 @@ onclick="gtag('event', 'conversion', {
 
 </div>
 
-<!-- BOTÃO FLUTUANTE -->
+<!-- BOTÃO FLUTUANTE COM DELAY -->
 <a class="whatsapp-float"
-href="https://wa.me/553438211320?text=Olá%20vim%20do%20Google%20e%20quero%20pedir%20pizza"
-onclick="gtag('event', 'conversion', {
+href="#"
+onclick="
+gtag('event', 'conversion', {
   'send_to': 'AW-18014111349/xDi0CMCg2pIcEPWM5o1D'
-});">
+});
+setTimeout(function(){
+  window.location.href='https://wa.me/553438211320?text=Olá%20vim%20do%20Google%20e%20quero%20pedir%20pizza';
+},150);
+return false;
+">
 💬
 </a>
 
