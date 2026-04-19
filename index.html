@@ -14,18 +14,18 @@ gtag('js', new Date());
 gtag('config', 'AW-18014111349');
 </script>
 
-<!-- EVENT SNIPPET -->
+<!-- FUNÇÃO DE CONVERSÃO (CORRIGIDA) -->
 <script>
 function gtag_report_conversion(url) {
   var callback = function () {
-    if (typeof(url) != 'undefined') {
-      window.location = url;
-    }
+    window.location.href = url;
   };
+
   gtag('event', 'conversion', {
       'send_to': 'AW-18014111349/gQAwCLOu354cEPWM5o1D',
       'event_callback': callback
   });
+
   return false;
 }
 </script>
@@ -138,9 +138,9 @@ header {
 
 <h2>🍕 Peça agora pelo WhatsApp</h2>
 
-<!-- BOTÃO WHATSAPP -->
+<!-- BOTÃO WHATSAPP (CORRIGIDO) -->
 <a class="botao"
-href="https://wa.me/553438211320?text=Olá%20vim%20do%20Google%20e%20quero%20pedir%20pizza"
+href="#"
 onclick="return gtag_report_conversion('https://wa.me/553438211320?text=Olá%20vim%20do%20Google%20e%20quero%20pedir%20pizza');">
 📲 PEDIR NO WHATSAPP
 </a>
@@ -150,7 +150,7 @@ onclick="return gtag_report_conversion('https://wa.me/553438211320?text=Olá%20v
 📞 LIGAR AGORA
 </a>
 
-<!-- LINK CARDÁPIO -->
+<!-- CARDÁPIO -->
 <a class="link-cardapio" href="https://pedido.anota.ai" target="_blank">
 📋 Ver cardápio completo
 </a>
@@ -172,9 +172,9 @@ onclick="return gtag_report_conversion('https://wa.me/553438211320?text=Olá%20v
 
 </div>
 
-<!-- BOTÃO FLUTUANTE -->
+<!-- BOTÃO FLUTUANTE (CORRIGIDO) -->
 <a class="whatsapp-float"
-href="https://wa.me/553438211320?text=Olá%20vim%20do%20Google%20e%20quero%20pedir%20pizza"
+href="#"
 onclick="return gtag_report_conversion('https://wa.me/553438211320?text=Olá%20vim%20do%20Google%20e%20quero%20pedir%20pizza');">
 💬
 </a>
