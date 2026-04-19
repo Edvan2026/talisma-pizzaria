@@ -14,17 +14,19 @@ gtag('js', new Date());
 gtag('config', 'AW-18014111349');
 </script>
 
-<!-- FUNÇÃO DE CONVERSÃO (CORRIGIDA) -->
+<!-- FUNÇÃO DE CONVERSÃO FORÇADA -->
 <script>
-function gtag_report_conversion(url) {
-  var callback = function () {
-    window.location.href = url;
-  };
+function gtag_report_conversion() {
 
+  // DISPARA CONVERSÃO
   gtag('event', 'conversion', {
-      'send_to': 'AW-18014111349/gQAwCLOu354cEPWM5o1D',
-      'event_callback': callback
+    'send_to': 'AW-18014111349/gQAwCLOu354cEPWM5o1D'
   });
+
+  // SEGURA E REDIRECIONA
+  setTimeout(function(){
+    window.location.href = 'https://wa.me/553438211320?text=Olá%20vim%20do%20Google%20e%20quero%20pedir%20pizza';
+  }, 1200);
 
   return false;
 }
@@ -138,10 +140,10 @@ header {
 
 <h2>🍕 Peça agora pelo WhatsApp</h2>
 
-<!-- BOTÃO WHATSAPP (CORRIGIDO) -->
+<!-- BOTÃO WHATSAPP -->
 <a class="botao"
 href="#"
-onclick="return gtag_report_conversion('https://wa.me/553438211320?text=Olá%20vim%20do%20Google%20e%20quero%20pedir%20pizza');">
+onclick="return gtag_report_conversion();">
 📲 PEDIR NO WHATSAPP
 </a>
 
@@ -172,10 +174,10 @@ onclick="return gtag_report_conversion('https://wa.me/553438211320?text=Olá%20v
 
 </div>
 
-<!-- BOTÃO FLUTUANTE (CORRIGIDO) -->
+<!-- BOTÃO FLUTUANTE -->
 <a class="whatsapp-float"
 href="#"
-onclick="return gtag_report_conversion('https://wa.me/553438211320?text=Olá%20vim%20do%20Google%20e%20quero%20pedir%20pizza');">
+onclick="return gtag_report_conversion();">
 💬
 </a>
 
