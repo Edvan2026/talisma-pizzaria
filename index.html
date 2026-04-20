@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Talismã Pizzaria</title>
+<title>TALISMÃ PIZZARIA | Pizza Quente na Sua Casa</title>
 
-<!-- GOOGLE ADS (NÃO MEXER) -->
+<!-- GOOGLE ADS TAG (NÃO MEXER) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18014111349"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
@@ -34,29 +34,39 @@ function gtag_report_conversion(url) {
 <style>
 body {
     margin:0;
-    font-family: Arial;
-    background:#f2f2f2;
+    font-family: Arial, sans-serif;
+    background: #0f0f0f;
+    color: white;
     text-align:center;
 }
 
-/* HEADER AZUL ORIGINAL */
+/* HEADER MODERNO */
 header {
-    background:#0d3b66;
-    color:white;
-    padding:25px 15px;
+    background: linear-gradient(135deg, #d62828, #ff7b00);
+    padding: 30px 15px;
 }
 
 header img {
-    width:110px;
-    margin-bottom:10px;
+    width:120px;
+    border-radius: 12px;
 }
 
-/* BOTÕES */
+h1 {
+    margin:10px 0 5px;
+    font-size: 28px;
+}
+
+.sub {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+/* BOTÃO PRINCIPAL */
 .cta {
     background:#25D366;
     color:white;
     padding:18px;
-    margin:12px auto;
+    margin:20px auto;
     width:90%;
     max-width:360px;
     display:block;
@@ -66,38 +76,24 @@ header img {
     text-decoration:none;
 }
 
-.ligar {
-    background:#0984e3;
-}
-
-.cardapio {
-    background:#444;
-}
-
-/* PROMOÇÃO ROLANDO */
+/* BLOCO PROMO */
 .promo {
-    background:#d62828;
-    color:#ffd60a;
-    padding:12px;
-    font-weight:bold;
-}
-
-/* BLOCO */
-.container {
-    padding:15px;
-}
-
-.box {
-    background:white;
-    margin:15px auto;
-    max-width:420px;
+    background:#1c1c1c;
+    margin:20px;
     padding:20px;
-    border-radius:12px;
-    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+    border-radius:15px;
+    border:1px solid #333;
 }
 
 .pizza {
+    margin:12px 0;
     font-size:18px;
+}
+
+/* URGÊNCIA */
+.urgencia {
+    color:#ffcc00;
+    font-weight:bold;
     margin:10px 0;
 }
 
@@ -111,10 +107,9 @@ header img {
     height:60px;
     border-radius:50%;
     display:flex;
-    align-items:center;
     justify-content:center;
+    align-items:center;
     font-size:30px;
-    color:white;
     text-decoration:none;
 }
 </style>
@@ -125,48 +120,36 @@ header img {
 <header>
     <img src="logo.png">
     <h1>Talismã Pizzaria</h1>
-    <div>🍕 Pizza quentinha entregue na sua casa</div>
+    <div class="sub">🔥 Pizza quentinha entregue na sua casa</div>
 </header>
 
-<!-- PROMOÇÃO ROLANDO -->
+<a class="cta"
+href="https://wa.me/553438211320?text=Olá%20vim%20do%20Google%20e%20quero%20pedir%20pizza"
+onclick="return gtag_report_conversion('https://wa.me/553438211320?text=Olá%20vim%20do%20Google%20e%20quero%20pedir%20pizza');">
+🍕 PEDIR AGORA NO WHATSAPP
+</a>
+
+<div class="urgencia">⏰ Promoção válida hoje até acabar o estoque</div>
+
 <div class="promo">
-🔥 Calabresa e Frango com Catupiry em promoção hoje!
+
+<h2>🔥 MAIS PEDIDAS</h2>
+
+<div class="pizza">🍕 Calabresa Especial — R$49,90</div>
+<div class="pizza">🍕 Frango com Catupiry — R$67,90</div>
+<div class="pizza">🍕 Portuguesa Completa — R$69,90</div>
+
 </div>
 
-<div class="container">
-
-<!-- BOTÃO WHATS -->
 <a class="cta"
 href="https://wa.me/553438211320?text=Quero%20fazer%20pedido"
 onclick="return gtag_report_conversion('https://wa.me/553438211320?text=Quero%20fazer%20pedido');">
-📲 PEDIR NO WHATSAPP
+💬 FAZER PEDIDO AGORA
 </a>
 
-<!-- BOTÃO LIGAR -->
-<a class="cta ligar" href="tel:+553438211320">
-📞 LIGAR AGORA
-</a>
-
-<!-- CARDÁPIO -->
-<a class="cta cardapio" href="https://pedido.anota.ai" target="_blank">
-📋 VER CARDÁPIO
-</a>
-
-<div class="box">
-
-<h2>🔥 PROMOÇÃO DO DIA</h2>
-
-<div class="pizza">🍕 Calabresa Grande — R$49,90</div>
-<div class="pizza">🍕 Frango com Catupiry — R$67,90</div>
-
-</div>
-
-</div>
-
-<!-- BOTÃO FLUTUANTE -->
 <a class="float"
-href="https://wa.me/553438211320?text=Quero%20fazer%20pedido"
-onclick="return gtag_report_conversion('https://wa.me/553438211320?text=Quero%20fazer%20pedido');">
+href="https://wa.me/553438211320?text=Olá%20vim%20do%20Google%20e%20quero%20pedir%20pizza"
+onclick="return gtag_report_conversion('https://wa.me/553438211320?text=Olá%20vim%20do%20Google%20e%20quero%20pedir%20pizza');">
 💬
 </a>
 
