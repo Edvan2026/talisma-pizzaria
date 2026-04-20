@@ -14,19 +14,19 @@ gtag('js', new Date());
 gtag('config', 'AW-18014111349');
 </script>
 
-<!-- FUNÇÃO DE CONVERSÃO FORÇADA -->
+<!-- CONVERSÃO GOOGLE ADS -->
 <script>
-function gtag_report_conversion() {
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
 
-  // DISPARA CONVERSÃO
   gtag('event', 'conversion', {
-    'send_to': 'AW-18014111349/gQAwCLOu354cEPWM5o1D'
+    'send_to': 'AW-18014111349/gQAwCLOu354cEPWM5o1D',
+    'event_callback': callback
   });
-
-  // SEGURA E REDIRECIONA
-  setTimeout(function(){
-    window.location.href = 'https://wa.me/553438211320?text=Olá%20vim%20do%20Google%20e%20quero%20pedir%20pizza';
-  }, 1200);
 
   return false;
 }
@@ -140,14 +140,14 @@ header {
 
 <h2>🍕 Peça agora pelo WhatsApp</h2>
 
-<!-- BOTÃO WHATSAPP -->
+<!-- WHATSAPP -->
 <a class="botao"
-href="#"
-onclick="return gtag_report_conversion();">
+href="https://wa.me/553438211320?text=Olá%20vim%20do%20Google%20e%20quero%20pedir%20pizza"
+onclick="return gtag_report_conversion('https://wa.me/553438211320?text=Olá%20vim%20do%20Google%20e%20quero%20pedir%20pizza');">
 📲 PEDIR NO WHATSAPP
 </a>
 
-<!-- BOTÃO LIGAR -->
+<!-- LIGAR -->
 <a class="botao-ligar" href="tel:+553438211320">
 📞 LIGAR AGORA
 </a>
@@ -176,8 +176,8 @@ onclick="return gtag_report_conversion();">
 
 <!-- BOTÃO FLUTUANTE -->
 <a class="whatsapp-float"
-href="#"
-onclick="return gtag_report_conversion();">
+href="https://wa.me/553438211320?text=Olá%20vim%20do%20Google%20e%20quero%20pedir%20pizza"
+onclick="return gtag_report_conversion('https://wa.me/553438211320?text=Olá%20vim%20do%20Google%20e%20quero%20pedir%20pizza');">
 💬
 </a>
 
