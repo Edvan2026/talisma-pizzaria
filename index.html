@@ -14,7 +14,7 @@ gtag('js', new Date());
 gtag('config', 'AW-18014111349');
 </script>
 
-<!-- CONVERSÃO GOOGLE ADS -->
+<!-- CONVERSÃO GOOGLE ADS (WHATSAPP - PRINCIPAL) -->
 <script>
 function gtag_report_conversion(url) {
   var callback = function () {
@@ -25,6 +25,24 @@ function gtag_report_conversion(url) {
 
   gtag('event', 'conversion', {
     'send_to': 'AW-18014111349/gQAwCLOu354cEPWM5o1D',
+    'event_callback': callback
+  });
+
+  return false;
+}
+</script>
+
+<!-- CONVERSÃO LIGAÇÃO (SECUNDÁRIA) -->
+<script>
+function gtag_report_conversion_tel(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+
+  gtag('event', 'conversion', {
+    'send_to': 'AW-18014111349/fnrfCKucxKEcEPWM5o1D',
     'event_callback': callback
   });
 
@@ -157,8 +175,10 @@ onclick="return gtag_report_conversion('https://wa.me/553438211320?text=Olá!%20
 👇 Clique e peça em menos de 1 minuto
 </p>
 
-<!-- LIGAR -->
-<a class="botao-ligar" href="tel:+553438211320">
+<!-- LIGAR COM RASTREIO -->
+<a class="botao-ligar"
+href="tel:+553438211320"
+onclick="return gtag_report_conversion_tel('tel:+553438211320');">
 📞 LIGAR AGORA
 </a>
 
