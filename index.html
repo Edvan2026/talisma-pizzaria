@@ -13,9 +13,7 @@ window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'AW-18014111349');
-</script>
 
-<script>
 function gtag_report_conversion(url) {
   var callback = function () {
     if (typeof(url) != 'undefined') {
@@ -59,6 +57,17 @@ header{
   background:#0d3b66;
   color:#fff;
   padding:20px;
+}
+
+/* LOGO */
+.logo{
+  width:90px;
+  height:90px;
+  object-fit:contain;
+  margin-bottom:10px;
+  border-radius:10px;
+  background:#fff;
+  padding:5px;
 }
 
 .container{
@@ -129,8 +138,17 @@ h1{
 <body>
 
 <header>
-  <h1>TALISMÃ PIZZARIA</h1>
+
+  <!-- LOGO (SE NÃO EXISTIR, APARECE TEXTO) -->
+  <img src="logo.png" class="logo" alt="Talismã Pizzaria"
+  onerror="this.style.display='none'; document.getElementById('nomeLogo').style.display='block';">
+
+  <div id="nomeLogo" style="display:none; font-weight:bold; font-size:20px;">
+    TALISMÃ PIZZARIA
+  </div>
+
   <p>🍕 Pizza quentinha em Patos de Minas</p>
+
 </header>
 
 <div class="container">
@@ -145,14 +163,14 @@ h1{
 
     <p>🚀 Entrega rápida • Pizza feita na hora</p>
 
-    <!-- WHATSAPP (PRINCIPAL) -->
+    <!-- WHATSAPP -->
     <a class="botao"
     href="https://wa.me/553438211320?text=Quero%20pedir%20a%20Pizza%20Calabresa%20R$49,90"
     onclick="return gtag_report_conversion('https://wa.me/553438211320?text=Quero%20pedir%20a%20Pizza%20Calabresa%20R$49,90');">
     🍕 PEDIR PELO WHATSAPP
     </a>
 
-    <!-- LIGAÇÃO (SECUNDÁRIO FORTE) -->
+    <!-- LIGAÇÃO -->
     <a class="botao-ligar"
     href="tel:+553438211320"
     onclick="return gtag_report_conversion_tel('tel:+553438211320');">
