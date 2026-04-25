@@ -59,15 +59,14 @@ header{
   padding:20px;
 }
 
-/* LOGO */
 .logo{
   width:90px;
   height:90px;
   object-fit:contain;
   margin-bottom:10px;
-  border-radius:10px;
   background:#fff;
   padding:5px;
+  border-radius:10px;
 }
 
 .container{
@@ -76,7 +75,7 @@ header{
 
 .card{
   background:#fff;
-  padding:20px;
+  padding:22px;
   border-radius:12px;
   max-width:420px;
   margin:20px auto;
@@ -85,10 +84,11 @@ header{
 
 h1{
   font-size:22px;
+  margin:10px 0;
 }
 
 .preco{
-  font-size:28px;
+  font-size:30px;
   color:#d62828;
   font-weight:bold;
   margin:10px 0;
@@ -139,16 +139,15 @@ h1{
 
 <header>
 
-  <!-- LOGO (SE NÃO EXISTIR, APARECE TEXTO) -->
+  <!-- LOGO (caso não tenha, mostra texto automaticamente) -->
   <img src="logo.png" class="logo" alt="Talismã Pizzaria"
-  onerror="this.style.display='none'; document.getElementById('nomeLogo').style.display='block';">
+  onerror="this.style.display='none'; document.getElementById('nome').style.display='block';">
 
-  <div id="nomeLogo" style="display:none; font-weight:bold; font-size:20px;">
+  <div id="nome" style="display:none;font-size:20px;font-weight:bold;">
     TALISMÃ PIZZARIA
   </div>
 
   <p>🍕 Pizza quentinha em Patos de Minas</p>
-
 </header>
 
 <div class="container">
@@ -163,14 +162,14 @@ h1{
 
     <p>🚀 Entrega rápida • Pizza feita na hora</p>
 
-    <!-- WHATSAPP -->
+    <!-- WHATSAPP (PRINCIPAL) -->
     <a class="botao"
     href="https://wa.me/553438211320?text=Quero%20pedir%20a%20Pizza%20Calabresa%20R$49,90"
     onclick="return gtag_report_conversion('https://wa.me/553438211320?text=Quero%20pedir%20a%20Pizza%20Calabresa%20R$49,90');">
     🍕 PEDIR PELO WHATSAPP
     </a>
 
-    <!-- LIGAÇÃO -->
+    <!-- LIGAÇÃO (SECUNDÁRIO FORTE) -->
     <a class="botao-ligar"
     href="tel:+553438211320"
     onclick="return gtag_report_conversion_tel('tel:+553438211320');">
