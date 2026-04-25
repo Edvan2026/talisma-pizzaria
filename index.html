@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TALISMÃ PIZZARIA</title>
+
+<title>TALISMÃ PIZZARIA | Pizza Calabresa R$49,90</title>
 
 <!-- GOOGLE TAG -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18014111349"></script>
@@ -14,7 +15,6 @@ gtag('js', new Date());
 gtag('config', 'AW-18014111349');
 </script>
 
-<!-- CONVERSÃO GOOGLE ADS (WHATSAPP - PRINCIPAL) -->
 <script>
 function gtag_report_conversion(url) {
   var callback = function () {
@@ -30,10 +30,7 @@ function gtag_report_conversion(url) {
 
   return false;
 }
-</script>
 
-<!-- CONVERSÃO LIGAÇÃO (SECUNDÁRIA) -->
-<script>
 function gtag_report_conversion_tel(url) {
   var callback = function () {
     if (typeof(url) != 'undefined') {
@@ -51,97 +48,88 @@ function gtag_report_conversion_tel(url) {
 </script>
 
 <style>
-body {
-    font-family: Arial;
-    margin: 0;
-    text-align: center;
-    background: #f2f2f2;
+body{
+  margin:0;
+  font-family:Arial;
+  background:#f4f4f4;
+  text-align:center;
 }
 
-header {
-    background: #0d3b66;
-    color: white;
-    padding: 25px 20px;
+header{
+  background:#0d3b66;
+  color:#fff;
+  padding:20px;
 }
 
-.container {
-    padding: 20px;
+.container{
+  padding:20px;
 }
 
-.botao {
-    display: block;
-    background: #25D366;
-    color: white;
-    padding: 22px;
-    margin: 15px auto;
-    width: 90%;
-    max-width: 350px;
-    font-size: 22px;
-    border-radius: 12px;
-    text-decoration: none;
-    font-weight: bold;
+.card{
+  background:#fff;
+  padding:20px;
+  border-radius:12px;
+  max-width:420px;
+  margin:20px auto;
+  box-shadow:0 2px 10px rgba(0,0,0,0.1);
 }
 
-.botao-ligar {
-    display: block;
-    background: #0984e3;
-    color: white;
-    padding: 16px;
-    margin: 10px auto;
-    width: 90%;
-    max-width: 350px;
-    font-size: 16px;
-    border-radius: 10px;
-    text-decoration: none;
-    font-weight: bold;
+h1{
+  font-size:22px;
 }
 
-.link-cardapio {
-    display: block;
-    margin: 8px auto 20px auto;
-    font-size: 13px;
-    color: #555;
-    text-decoration: underline;
+.preco{
+  font-size:28px;
+  color:#d62828;
+  font-weight:bold;
+  margin:10px 0;
 }
 
-.whatsapp-float {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 65px;
-    height: 65px;
-    background: #25D366;
-    color: white;
-    border-radius: 50%;
-    font-size: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    z-index: 9999;
+.urgencia{
+  color:#d62828;
+  font-weight:bold;
 }
 
-.promo {
-    background: #d62828;
-    color: #ffd60a;
-    padding: 25px;
-    margin: 25px auto;
-    max-width: 420px;
-    border-radius: 12px;
+.botao{
+  display:block;
+  background:#25D366;
+  color:#fff;
+  padding:18px;
+  margin:15px auto;
+  width:90%;
+  max-width:340px;
+  font-size:18px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:bold;
 }
 
-.pizza-item {
-    font-size: 18px;
-    font-weight: bold;
-    margin: 10px 0;
+.botao-ligar{
+  display:block;
+  background:#0984e3;
+  color:#fff;
+  padding:14px;
+  margin:10px auto;
+  width:90%;
+  max-width:340px;
+  font-size:15px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:bold;
 }
 
-#digitando {
-    font-size: 16px;
-    font-weight: bold;
-    min-height: 30px;
-    margin-bottom: 15px;
+.link{
+  font-size:13px;
+  color:#555;
+  text-decoration:underline;
+  display:block;
+  margin-top:10px;
+}
+
+.footer{
+  font-size:13px;
+  color:#777;
+  margin-top:15px;
 }
 </style>
 </head>
@@ -149,99 +137,45 @@ header {
 <body>
 
 <header>
-    <img src="logo.png" style="width:110px; margin-bottom:10px;">
-    <h1>TALISMÃ PIZZARIA</h1>
-    <p>🔥 Entrega rápida • Pizza quentinha</p>
+  <h1>TALISMÃ PIZZARIA</h1>
+  <p>🍕 Pizza quentinha • Entrega rápida em Patrocínio</p>
 </header>
 
 <div class="container">
 
-<h2>🔥 Calabresa Grande por R$49,90</h2>
+  <div class="card">
 
-<p style="color:red; font-weight:bold; font-size:18px;">
-⚠️ Restam poucas unidades hoje
-</p>
+    <h1>🍕 Calabresa Grande</h1>
 
-<p>🚀 Entrega rápida • Chega quentinha na sua casa</p>
+    <div class="preco">R$49,90</div>
 
-<!-- WHATSAPP -->
-<a class="botao"
-href="https://wa.me/553438211320?text=Olá!%20Quero%20pedir%20AGORA%20a%20pizza%20de%20calabresa%20grande%20por%20R$49,90%20🍕🔥"
-onclick="return gtag_report_conversion('https://wa.me/553438211320?text=Olá!%20Quero%20pedir%20AGORA%20a%20pizza%20de%20calabresa%20grande%20por%20R$49,90%20🍕🔥');">
-🔥 QUERO MINHA PIZZA AGORA
-</a>
+    <p class="urgencia">⚠️ Promoção por tempo limitado</p>
 
-<p style="font-weight:bold; font-size:16px;">
-👇 Clique e peça em menos de 1 minuto
-</p>
+    <p>🚀 Entrega rápida • Pizza feita na hora</p>
 
-<!-- LIGAR COM RASTREIO -->
-<a class="botao-ligar"
-href="tel:+553438211320"
-onclick="return gtag_report_conversion_tel('tel:+553438211320');">
-📞 LIGAR AGORA
-</a>
+    <a class="botao"
+    href="https://wa.me/553438211320?text=Quero%20pedir%20a%20Pizza%20Calabresa%20R$49,90"
+    onclick="return gtag_report_conversion('https://wa.me/553438211320?text=Quero%20pedir%20a%20Pizza%20Calabresa%20R$49,90');">
+    🍕 PEDIR NO WHATSAPP AGORA
+    </a>
 
-<!-- CARDÁPIO -->
-<a class="link-cardapio" href="https://pedido.anota.ai" target="_blank">
-📋 Ver cardápio completo
-</a>
+    <a class="botao-ligar"
+    href="tel:+553438211320"
+    onclick="return gtag_report_conversion_tel('tel:+553438211320');">
+    📞 LIGAR E PEDIR AGORA
+    </a>
 
-<!-- PROMOÇÃO -->
-<div class="promo">
-    <h2>🔥 PROMOÇÃO DO DIA</h2>
+    <a class="link" href="https://talismapizzaria.com.br/cardapio">
+    📋 Ver cardápio completo
+    </a>
 
-    <div id="digitando"></div>
-
-    <div class="pizza-item">
-        🍕 Calabresa Grande — R$49,90
+    <div class="footer">
+      🔥 Atendimento rápido • Pizza bem recheada • Entrega em Patrocínio
     </div>
-</div>
+
+  </div>
 
 </div>
-
-<!-- BOTÃO FLUTUANTE -->
-<a class="whatsapp-float"
-href="https://wa.me/553438211320?text=Olá!%20Quero%20pedir%20AGORA%20a%20pizza%20de%20calabresa%20grande%20por%20R$49,90%20🍕🔥"
-onclick="return gtag_report_conversion('https://wa.me/553438211320?text=Olá!%20Quero%20pedir%20AGORA%20a%20pizza%20de%20calabresa%20grande%20por%20R$49,90%20🍕🔥');">
-💬
-</a>
-
-<script>
-const frases = [
-"🔥 Só hoje essa promoção!",
-"🍕 Pizza quentinha saindo agora!",
-"⚡ Peça rápido antes que acabe!"
-];
-
-let i = 0;
-let j = 0;
-let apagando = false;
-
-function loop() {
-    const el = document.getElementById("digitando");
-    const texto = frases[i];
-
-    if (!apagando) {
-        el.innerHTML = texto.substring(0, j++);
-        if (j > texto.length) {
-            apagando = true;
-            setTimeout(loop, 1200);
-            return;
-        }
-    } else {
-        el.innerHTML = texto.substring(0, j--);
-        if (j < 0) {
-            apagando = false;
-            i = (i + 1) % frases.length;
-        }
-    }
-
-    setTimeout(loop, apagando ? 40 : 70);
-}
-
-loop();
-</script>
 
 </body>
 </html>
