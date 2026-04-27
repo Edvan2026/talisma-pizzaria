@@ -6,6 +6,47 @@
 
 <title>TALISMÃ PIZZARIA | Pizza Calabresa em Patos de Minas</title>
 
+<!-- GOOGLE TAG -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18014111349"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'AW-18014111349');
+</script>
+
+<!-- CONVERSÃO WHATSAPP -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+    'send_to': 'AW-18014111349/gQAwCLOu354cEPWM5o1D',
+    'event_callback': callback
+  });
+  return false;
+}
+</script>
+
+<!-- CONVERSÃO LIGAÇÃO -->
+<script>
+function gtag_report_conversion_tel(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+    'send_to': 'AW-18014111349/fnrfCKucxKEcEPWM5o1D',
+    'event_callback': callback
+  });
+  return false;
+}
+</script>
+
 <style>
 body{
   margin:0;
@@ -129,20 +170,21 @@ h1{
 
     <p>⏱️ Pronta em 20 a 30 minutos • Retirada ou entrega</p>
 
-    <!-- BOTÃO WHATSAPP CORRIGIDO -->
+    <!-- WHATSAPP COM RASTREIO -->
     <a class="botao"
-    href="https://wa.me/553438211320?text=Quero%20pedir%20pizza">
+    href="https://wa.me/553438211320?text=Quero%20pedir%20pizza"
+    onclick="return gtag_report_conversion('https://wa.me/553438211320?text=Quero%20pedir%20pizza');">
     🔥 PEDIR AGORA PELO WHATSAPP
     </a>
 
-    <!-- AVISO CORRETO -->
     <div class="aviso">
       👉 Após clicar, toque em "Abrir app" para falar conosco
     </div>
 
-    <!-- BOTÃO LIGAÇÃO -->
+    <!-- LIGAÇÃO COM RASTREIO -->
     <a class="botao-ligar"
-    href="tel:+553438211320">
+    href="tel:+553438211320"
+    onclick="return gtag_report_conversion_tel('tel:+553438211320');">
     📞 Prefere ligar? Pedir por telefone
     </a>
 
