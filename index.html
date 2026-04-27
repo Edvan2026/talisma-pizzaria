@@ -6,15 +6,6 @@
 
 <title>TALISMÃ PIZZARIA | Pizza Calabresa</title>
 
-<!-- GOOGLE TAG -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18014111349"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'AW-18014111349');
-</script>
-
 <style>
 body{
   margin:0;
@@ -97,6 +88,12 @@ h1{
   font-weight:bold;
 }
 
+.aviso{
+  font-size:14px;
+  color:#555;
+  margin-top:10px;
+}
+
 .footer{
   font-size:13px;
   color:#777;
@@ -132,11 +129,17 @@ h1{
 
     <p>⏱️ Pronta em 20 a 30 minutos • Retirada ou entrega</p>
 
-    <!-- WHATSAPP (PRINCIPAL - SEM TRAVAR) -->
+    <!-- WHATSAPP -->
     <a class="botao"
-    href="https://wa.me/553438211320?text=Quero%20pedir%20pizza">
+    href="https://api.whatsapp.com/send?phone=553438211320&text=Quero%20pedir%20pizza"
+    target="_blank">
     🔥 PEDIR AGORA PELO WHATSAPP
     </a>
+
+    <!-- AVISO -->
+    <div class="aviso">
+      ⏳ Redirecionando automaticamente para o WhatsApp...
+    </div>
 
     <!-- LIGAÇÃO -->
     <a class="botao-ligar"
@@ -151,6 +154,13 @@ h1{
   </div>
 
 </div>
+
+<!-- REDIRECIONAMENTO SUAVE -->
+<script>
+setTimeout(function(){
+  window.location.href = "https://api.whatsapp.com/send?phone=553438211320&text=Quero%20pedir%20pizza";
+}, 1500);
+</script>
 
 </body>
 </html>
