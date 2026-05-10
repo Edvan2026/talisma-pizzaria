@@ -51,7 +51,8 @@ function gtag_report_conversion_tel(url) {
 body{
   margin:0;
   font-family:Arial;
-  background:#f4f4f4;
+  background:#0b0b0b;
+  color:white;
   text-align:center;
 }
 
@@ -76,12 +77,12 @@ header{
 }
 
 .card{
-  background:#fff;
+  background:#1a1a1a;
   padding:22px;
   border-radius:12px;
   max-width:420px;
   margin:20px auto;
-  box-shadow:0 2px 10px rgba(0,0,0,0.1);
+  box-shadow:0 2px 10px rgba(0,0,0,0.3);
 }
 
 h1{
@@ -90,14 +91,14 @@ h1{
 }
 
 .preco{
-  font-size:30px;
-  color:#d62828;
+  font-size:34px;
+  color:#25D366;
   font-weight:bold;
   margin:10px 0;
 }
 
 .urgencia{
-  color:#d62828;
+  color:#ff3b3b;
   font-weight:bold;
 }
 
@@ -131,13 +132,13 @@ h1{
 
 .aviso{
   font-size:14px;
-  color:#555;
+  color:#bbb;
   margin-top:10px;
 }
 
 .footer{
   font-size:13px;
-  color:#777;
+  color:#aaa;
   margin-top:15px;
 }
 </style>
@@ -154,7 +155,7 @@ h1{
     TALISMÃ PIZZARIA
   </div>
 
-  <p>🍕 Pizza quentinha em Patos de Minas</p>
+  <p>🍕 Pizza artesanal em Patos de Minas</p>
 
 </header>
 
@@ -162,39 +163,68 @@ h1{
 
   <div class="card">
 
-    <h1>🍕 Calabresa Grande</h1>
+    <!-- HERO -->
+    <img src="pizza-calabresa.jpg" style="width:100%;border-radius:12px;margin-bottom:10px;">
 
-    <div class="preco">R$49,90</div>
+    <h1>🍕 Calabresa Grande Extra Recheada</h1>
 
-    <p class="urgencia">⚠️ Promoção por tempo limitado</p>
+    <div class="preco">R$57,90</div>
+
+    <!-- PROVA SOCIAL -->
+    <p style="color:#fff;font-weight:bold;">
+      ⭐ Mais de 500 pedidos entregues em Patos de Minas
+    </p>
+
+    <!-- URGÊNCIA -->
+    <p class="urgencia">
+      🔥 Promoção válida hoje ou até acabar a massa do dia
+    </p>
 
     <p>⏱️ Pronta em 20 a 30 minutos • Retirada ou entrega</p>
 
-    <!-- WHATSAPP (VERSÃO MAIS ESTÁVEL) -->
+    <!-- WHATSAPP -->
     <a class="botao"
-    href="https://api.whatsapp.com/send?phone=553438211320&text=Quero%20a%20pizza%20de%20calabresa%20grande%20por%20R%2449%2C90%20agora"
-    onclick="return gtag_report_conversion('https://api.whatsapp.com/send?phone=553438211320&text=Quero%20a%20pizza%20de%20calabresa%20grande%20por%20R%2449%2C90%20agora');">
+    href="https://api.whatsapp.com/send?phone=553438211320&text=Quero%20a%20pizza%20de%20calabresa%20grande%20por%20R%2457%2C90%20agora"
+    onclick="return gtag_report_conversion('https://api.whatsapp.com/send?phone=553438211320&text=Quero%20a%20pizza%20de%20calabresa%20grande%20por%20R%2457%2C90%20agora');">
     🔥 PEDIR AGORA NO WHATSAPP
     </a>
 
     <div class="aviso">
-      👉 Após clicar, toque em <b>“Conversar”</b> para abrir o WhatsApp
+      👉 Clique e finalize seu pedido em menos de 1 minuto
     </div>
 
     <!-- LIGAÇÃO -->
     <a class="botao-ligar"
     href="tel:+553438211320"
     onclick="return gtag_report_conversion_tel('tel:+553438211320');">
-    📞 Prefere ligar? Pedir por telefone
+    📞 Prefere ligar? Faça seu pedido agora
     </a>
 
     <div class="footer">
-      🔥 Atendimento rápido • Pizza bem recheada • Patos de Minas
+      🍕 Forno sempre quente • Atendimento rápido • Entrega local
     </div>
 
   </div>
 
 </div>
+
+<!-- BOTÃO FIXO MOBILE -->
+<a href="https://api.whatsapp.com/send?phone=553438211320&text=Quero%20fazer%20um%20pedido"
+style="
+position:fixed;
+bottom:15px;
+left:15px;
+right:15px;
+background:#25D366;
+color:white;
+padding:15px;
+border-radius:12px;
+text-align:center;
+font-weight:bold;
+text-decoration:none;
+z-index:999;">
+🍕 PEDIR AGORA
+</a>
 
 </body>
 </html>
