@@ -3,32 +3,212 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TESTE GITHUB PAGES</title>
+
+<title>TALISMÃ PIZZARIA | Pizza Calabresa em Patos de Minas</title>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18014111349"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'AW-18014111349');
+</script>
+
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+    'send_to': 'AW-18014111349/gQAwCLOu354cEPWM5o1D',
+    'event_callback': callback
+  });
+  return false;
+}
+</script>
+
+<script>
+function gtag_report_conversion_tel(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+    'send_to': 'AW-18014111349/fnrfCKucxKEcEPWM5o1D',
+    'event_callback': callback
+  });
+  return false;
+}
+</script>
 
 <style>
 body{
   margin:0;
-  background:black;
-  color:white;
   font-family:Arial;
+  background:#0b0b0b;
+  color:white;
   text-align:center;
-  padding-top:100px;
 }
+
+header{
+  background:#0d3b66;
+  color:#fff;
+  padding:20px;
+}
+
+.logo{
+  width:90px;
+  height:90px;
+  object-fit:contain;
+  background:#fff;
+  padding:5px;
+  border-radius:10px;
+  margin-bottom:10px;
+}
+
+.container{
+  padding:20px;
+}
+
+.card{
+  background:#1a1a1a;
+  padding:22px;
+  border-radius:12px;
+  max-width:420px;
+  margin:20px auto;
+  box-shadow:0 2px 10px rgba(0,0,0,0.3);
+}
+
 h1{
-  color:#25D366;
-  font-size:40px;
+  font-size:22px;
+  margin:10px 0;
 }
-p{
-  font-size:20px;
+
+.preco{
+  font-size:34px;
+  color:#25D366;
+  font-weight:bold;
+  margin:10px 0;
+}
+
+.urgencia{
+  color:#ff3b3b;
+  font-weight:bold;
+}
+
+.botao{
+  display:block;
+  background:#25D366;
+  color:#fff;
+  padding:20px;
+  margin:15px auto;
+  width:90%;
+  max-width:340px;
+  font-size:18px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+.botao-ligar{
+  display:block;
+  background:#0984e3;
+  color:#fff;
+  padding:16px;
+  margin:10px auto;
+  width:90%;
+  max-width:340px;
+  font-size:16px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+.aviso{
+  font-size:14px;
+  color:#bbb;
+  margin-top:10px;
+}
+
+.footer{
+  font-size:13px;
+  color:#aaa;
+  margin-top:15px;
 }
 </style>
-
 </head>
 
 <body>
 
-<h1>TESTE GITHUB ATIVO</h1>
-<p>Se você está vendo isso, o GitHub Pages está funcionando corretamente.</p>
+<header>
+  <img src="logo.png" class="logo">
+
+  <p>🍕 Pizza artesanal em Patos de Minas</p>
+</header>
+
+<div class="container">
+
+  <div class="card">
+
+    <img src="pizza-calabresa.jpg" style="width:100%;border-radius:12px;margin-bottom:10px;">
+
+    <h1>🍕 Calabresa Grande Extra Recheada</h1>
+
+    <div class="preco">R$57,90</div>
+
+    <p style="color:#fff;font-weight:bold;">
+      ⭐ Mais de 500 pedidos entregues em Patos de Minas
+    </p>
+
+    <p class="urgencia">
+      🔥 Promoção válida hoje ou até acabar a massa do dia
+    </p>
+
+    <p>⏱️ Pronta em 20 a 30 minutos • Retirada ou entrega</p>
+
+    <a class="botao"
+    href="https://api.whatsapp.com/send?phone=553438211320&text=Quero%20a%20pizza%20de%20calabresa%20grande%20por%20R%2457%2C90%20agora"
+    onclick="return gtag_report_conversion(this.href);">
+    🔥 PEDIR AGORA NO WHATSAPP
+    </a>
+
+    <div class="aviso">
+      👉 Clique e finalize seu pedido em menos de 1 minuto
+    </div>
+
+    <a class="botao-ligar"
+    href="tel:+553438211320"
+    onclick="return gtag_report_conversion_tel(this.href);">
+    📞 Prefere ligar? Faça seu pedido agora
+    </a>
+
+    <div class="footer">
+      🍕 Forno sempre quente • Atendimento rápido • Entrega local
+    </div>
+
+  </div>
+
+</div>
+
+<a href="https://api.whatsapp.com/send?phone=553438211320"
+style="
+position:fixed;
+bottom:15px;
+left:15px;
+right:15px;
+background:#25D366;
+color:white;
+padding:15px;
+border-radius:12px;
+text-align:center;
+font-weight:bold;
+text-decoration:none;
+z-index:999;">
+🍕 PEDIR AGORA
+</a>
 
 </body>
 </html>
