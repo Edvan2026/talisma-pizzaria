@@ -43,12 +43,25 @@ header p{
 }
 
 .item{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
   padding:12px 0;
   border-bottom:1px solid #333;
 }
 
 .item:last-child{
   border:none;
+}
+
+.price{
+  font-weight:bold;
+  white-space:nowrap;
+}
+
+.oldprice{
+  font-size:12px;
+  opacity:0.7;
 }
 
 .btn{
@@ -63,16 +76,18 @@ header p{
   max-width:320px;
 }
 
-.whatsapp{
-  background:#25D366;
+.whatsapp{ background:#25D366; }
+.phone{ background:#2196F3; }
+.saipos{ background:#FF9800; }
+
+/* HAMBÚRGUER DESTAQUE */
+.burger-card{
+  border:2px solid #FF9800;
 }
 
-.phone{
-  background:#2196F3;
-}
-
-.saipos{
-  background:#FF9800;
+.burger-title{
+  color:#FF9800;
+  margin-top:0;
 }
 </style>
 </head>
@@ -91,30 +106,39 @@ header p{
     <h3>🔥 Mais Pedidas (Pizzas Grandes)</h3>
 
     <div class="item">
-      🍕 Calabresa (Grande)<br>
-      <s>R$ 57,90</s> <b style="color:#25D366;">PROMOÇÃO</b>
+      <div>
+        🍕 Calabresa (Grande)<br>
+        <span class="oldprice"><s>R$ 57,90</s> PROMOÇÃO</span>
+      </div>
+      <div class="price">R$ 57,90</div>
     </div>
 
     <div class="item">
-      🍕 Frango com Catupiry (Grande)<br>
-      R$ 75,00
+      <div>🍕 Frango com Catupiry (Grande)</div>
+      <div class="price">R$ 75,00</div>
     </div>
 
     <div class="item">
-      🍕 Portuguesa (Grande)<br>
-      R$ 68,00
+      <div>🍕 Portuguesa (Grande)</div>
+      <div class="price">R$ 68,00</div>
     </div>
 
     <div class="item">
-      🍕 Caipira (Grande)<br>
-      R$ 79,00
+      <div>🍕 Caipira (Grande)</div>
+      <div class="price">R$ 79,00</div>
     </div>
   </div>
 
-  <!-- HAMBÚRGUER -->
-  <div class="card">
-    <h3>🍔 Também temos</h3>
-    <p>Hambúrguer artesanal disponível no cardápio completo</p>
+  <!-- HAMBÚRGUER DESTACADO -->
+  <div class="card burger-card">
+
+    <h3 class="burger-title">🍔 Também temos hambúrguer artesanal</h3>
+
+    <p style="margin:0; font-size:14px;">
+      🔥 Carne suculenta + queijo + molho especial<br>
+      👉 Peça direto no cardápio completo
+    </p>
+
   </div>
 
   <!-- BOTÕES -->
