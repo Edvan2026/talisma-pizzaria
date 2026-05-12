@@ -14,9 +14,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id=GTM-KQTQM4JS'+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-KQTQM4JS');
 </script>
-<!-- End Google Tag Manager -->
 
-<!-- GOOGLE ADS (mantido por segurança por enquanto) -->
+<!-- Google Ads -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18014111349"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
@@ -25,32 +24,42 @@ gtag('js', new Date());
 gtag('config', 'AW-18014111349');
 </script>
 
+<!-- Conversão WhatsApp -->
 <script>
 function gtag_report_conversion(url) {
   var callback = function () {
-    if (typeof(url) != 'undefined') {
-      window.location = url;
-    }
+    window.location = url;
   };
+
   gtag('event', 'conversion', {
     'send_to': 'AW-18014111349/gQAwCLOu354cEPWM5o1D',
     'event_callback': callback
   });
+
+  setTimeout(function () {
+    window.location = url;
+  }, 700);
+
   return false;
 }
 </script>
 
+<!-- Conversão Ligação -->
 <script>
 function gtag_report_conversion_tel(url) {
   var callback = function () {
-    if (typeof(url) != 'undefined') {
-      window.location = url;
-    }
+    window.location = url;
   };
+
   gtag('event', 'conversion', {
     'send_to': 'AW-18014111349/fnrfCKucxKEcEPWM5o1D',
     'event_callback': callback
   });
+
+  setTimeout(function () {
+    window.location = url;
+  }, 700);
+
   return false;
 }
 </script>
@@ -155,21 +164,23 @@ h1{
 
 <body>
 
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KQTQM4JS"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+<!-- GTM noscript -->
+<noscript>
+<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KQTQM4JS"
+height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
 
 <header>
-  <img src="logo.png" class="logo">
+  <img src="logo.png" class="logo" alt="Talismã Pizzaria">
   <p>🍕 Pizza artesanal em Patos de Minas</p>
 </header>
 
 <div class="container">
-
   <div class="card">
 
-    <img src="pizza-calabresa.jpg" style="width:100%;border-radius:12px;margin-bottom:10px;">
+    <img src="pizza-calabresa.jpg"
+    style="width:100%;border-radius:12px;margin-bottom:10px;"
+    alt="Pizza Calabresa">
 
     <h1>🍕 Calabresa Grande Extra Recheada</h1>
 
@@ -185,20 +196,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <p>⏱️ Pronta em 20 a 30 minutos • Retirada ou entrega</p>
 
+    <!-- Botão principal WhatsApp -->
     <a class="botao"
-    href="https://api.whatsapp.com/send?phone=553438211320&text=Quero%20a%20pizza%20de%20calabresa%20grande%20por%20R%2457%2C90%20agora"
-    onclick="return gtag_report_conversion(this.href);">
-    🔥 PEDIR AGORA NO WHATSAPP
+      href="https://api.whatsapp.com/send?phone=553438211320&text=Quero%20a%20pizza%20de%20calabresa%20grande%20por%20R%2457%2C90%20agora"
+      onclick="return gtag_report_conversion(this.href);">
+      🔥 PEDIR AGORA NO WHATSAPP
     </a>
 
     <div class="aviso">
       👉 Clique e finalize seu pedido em menos de 1 minuto
     </div>
 
+    <!-- Botão telefone -->
     <a class="botao-ligar"
-    href="tel:+553438211320"
-    onclick="return gtag_report_conversion_tel(this.href);">
-    📞 Ligue agora e receba seu pedido mais rápido
+      href="tel:+553438211320"
+      onclick="return gtag_report_conversion_tel(this.href);">
+      📞 Ligue agora e receba seu pedido mais rápido
     </a>
 
     <div class="footer">
@@ -206,24 +219,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 
   </div>
-
 </div>
 
-<a href="https://api.whatsapp.com/send?phone=553438211320"
-style="
-position:fixed;
-bottom:15px;
-left:15px;
-right:15px;
-background:#25D366;
-color:white;
-padding:15px;
-border-radius:12px;
-text-align:center;
-font-weight:bold;
-text-decoration:none;
-z-index:999;">
-🍕 PEDIR AGORA
+<!-- Botão fixo -->
+<a
+  href="https://api.whatsapp.com/send?phone=553438211320&text=Quero%20a%20pizza%20de%20calabresa%20grande%20por%20R%2457%2C90%20agora"
+  onclick="return gtag_report_conversion(this.href);"
+  style="
+  position:fixed;
+  bottom:15px;
+  left:15px;
+  right:15px;
+  background:#25D366;
+  color:white;
+  padding:15px;
+  border-radius:12px;
+  text-align:center;
+  font-weight:bold;
+  text-decoration:none;
+  z-index:999;">
+  🍕 PEDIR AGORA
 </a>
 
 </body>
