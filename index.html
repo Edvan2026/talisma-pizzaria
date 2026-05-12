@@ -8,57 +8,44 @@
 
 <!-- Google Tag Manager -->
 <script>
-(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id=GTM-KQTQM4JS'+dl;f.parentNode.insertBefore(j,f);
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({
+  'gtm.start': new Date().getTime(),
+  event:'gtm.js'
+});
+var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer' ? '&l='+l : '';
+j.async=true;
+j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-KQTQM4JS');
 </script>
+<!-- End Google Tag Manager -->
 
-<!-- Google Ads -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18014111349"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'AW-18014111349');
-</script>
-
-<!-- Conversão WhatsApp -->
 <script>
 function gtag_report_conversion(url) {
-  var callback = function () {
-    window.location = url;
-  };
+  window.dataLayer = window.dataLayer || [];
 
-  gtag('event', 'conversion', {
-    'send_to': 'AW-18014111349/gQAwCLOu354cEPWM5o1D',
-    'event_callback': callback
+  dataLayer.push({
+    event: 'whatsapp_click'
   });
 
   setTimeout(function () {
-    window.location = url;
-  }, 700);
+    window.location.href = url;
+  }, 500);
 
   return false;
 }
-</script>
 
-<!-- Conversão Ligação -->
-<script>
 function gtag_report_conversion_tel(url) {
-  var callback = function () {
-    window.location = url;
-  };
+  window.dataLayer = window.dataLayer || [];
 
-  gtag('event', 'conversion', {
-    'send_to': 'AW-18014111349/fnrfCKucxKEcEPWM5o1D',
-    'event_callback': callback
+  dataLayer.push({
+    event: 'telefone_click'
   });
 
   setTimeout(function () {
-    window.location = url;
-  }, 700);
+    window.location.href = url;
+  }, 500);
 
   return false;
 }
@@ -67,7 +54,7 @@ function gtag_report_conversion_tel(url) {
 <style>
 body{
   margin:0;
-  font-family:Arial;
+  font-family:Arial,sans-serif;
   background:#141414;
   color:white;
   text-align:center;
@@ -123,7 +110,7 @@ h1{
 .botao{
   display:block;
   background:#25D366;
-  color:#fff;
+  color:white;
   padding:20px;
   margin:15px auto;
   width:90%;
@@ -137,7 +124,7 @@ h1{
 .botao-ligar{
   display:block;
   background:#0984e3;
-  color:#fff;
+  color:white;
   padding:16px;
   margin:10px auto;
   width:90%;
@@ -164,11 +151,12 @@ h1{
 
 <body>
 
-<!-- GTM noscript -->
+<!-- Google Tag Manager (noscript) -->
 <noscript>
 <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KQTQM4JS"
 height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </noscript>
+<!-- End Google Tag Manager (noscript) -->
 
 <header>
   <img src="logo.png" class="logo" alt="Talismã Pizzaria">
@@ -186,7 +174,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 
     <div class="preco">R$57,90</div>
 
-    <p style="color:#fff;font-weight:bold;">
+    <p style="font-weight:bold;">
       ⭐ Mais de 500 pedidos entregues em Patos de Minas
     </p>
 
@@ -221,23 +209,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
 </div>
 
-<!-- Botão fixo -->
+<!-- Botão fixo inferior -->
 <a
   href="https://api.whatsapp.com/send?phone=553438211320&text=Quero%20a%20pizza%20de%20calabresa%20grande%20por%20R%2457%2C90%20agora"
   onclick="return gtag_report_conversion(this.href);"
   style="
-  position:fixed;
-  bottom:15px;
-  left:15px;
-  right:15px;
-  background:#25D366;
-  color:white;
-  padding:15px;
-  border-radius:12px;
-  text-align:center;
-  font-weight:bold;
-  text-decoration:none;
-  z-index:999;">
+    position:fixed;
+    bottom:15px;
+    left:15px;
+    right:15px;
+    background:#25D366;
+    color:white;
+    padding:15px;
+    border-radius:12px;
+    text-align:center;
+    font-weight:bold;
+    text-decoration:none;
+    z-index:999;">
   🍕 PEDIR AGORA
 </a>
 
