@@ -15,36 +15,36 @@ body{
 }
 
 header{
-  background:#b71c1c;
-  padding:25px 15px;
+  background:#0D1B2A;
+  padding:15px 15px 10px;
   text-align:center;
 }
 
 header img{
-  width:120px;
+  width:95px;
   display:block;
-  margin:0 auto 10px;
+  margin:0 auto 8px;
 }
 
 header h1{
   margin:0;
-  font-size:24px;
+  font-size:22px;
 }
 
 header p{
-  margin:5px 0 0;
-  font-size:14px;
-  opacity:0.8;
+  margin:4px 0 0;
+  font-size:13px;
+  opacity:0.85;
 }
 
 .container{
-  padding:20px;
+  padding:12px;
 }
 
 .card{
   background:#1e1e1e;
-  padding:15px;
-  margin-bottom:15px;
+  padding:14px;
+  margin-bottom:10px;
   border-radius:10px;
 }
 
@@ -52,8 +52,9 @@ header p{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:12px 0;
+  padding:10px 0;
   border-bottom:1px solid #333;
+  gap:10px;
 }
 
 .item:last-child{
@@ -63,6 +64,7 @@ header p{
 .price{
   font-weight:bold;
   white-space:nowrap;
+  color:#fff;
 }
 
 .promo{
@@ -70,25 +72,36 @@ header p{
   color:#fff;
   padding:3px 8px;
   border-radius:5px;
-  font-size:11px;
+  font-size:10px;
   margin-left:6px;
+  font-weight:bold;
 }
 
 .btn{
   display:block;
   text-align:center;
-  padding:15px;
-  margin:10px auto;
+  padding:13px;
+  margin:8px auto;
   border-radius:10px;
   text-decoration:none;
   font-weight:bold;
   color:#fff;
   max-width:320px;
+  font-size:15px;
 }
 
-.whatsapp{ background:#25D366; }
-.phone{ background:#2196F3; }
-.saipos{ background:#FF9800; }
+.whatsapp{
+  background:#25D366;
+}
+
+.phone{
+  background:#2196F3;
+}
+
+.saipos{
+  background:#FF9800;
+  font-size:16px;
+}
 
 /* HAMBÚRGUER */
 .burger-card{
@@ -98,6 +111,8 @@ header p{
 .burger-title{
   color:#FF9800;
   margin-top:0;
+  margin-bottom:6px;
+  font-size:18px;
 }
 </style>
 </head>
@@ -105,39 +120,71 @@ header p{
 <body>
 
 <header>
+
   <img src="logo.png" alt="Talismã Pizzaria">
 
   <h1>🍕 Talismã Pizzaria</h1>
+
   <p>Peça rápido pelo WhatsApp ou cardápio</p>
+
 </header>
 
 <div class="container">
 
   <!-- MAIS PEDIDAS -->
   <div class="card">
-    <h3>🔥 Mais Pedidas (Pizzas Grandes)</h3>
+
+    <h3 style="margin-top:0;">
+      🔥 Mais Pedidas (Pizzas Grandes)
+    </h3>
 
     <div class="item">
+
       <div>
         🍕 Calabresa (Grande)
         <span class="promo">PROMOÇÃO</span>
       </div>
-      <div class="price">R$ 57,90</div>
+
+      <div class="price">
+        R$ 57,90
+      </div>
+
     </div>
 
     <div class="item">
-      <div>🍕 Frango com Catupiry (Grande)</div>
-      <div class="price">R$ 75,00</div>
+
+      <div>
+        🍕 Frango com Catupiry (Grande)
+      </div>
+
+      <div class="price">
+        R$ 75,00
+      </div>
+
     </div>
 
     <div class="item">
-      <div>🍕 Portuguesa (Grande)</div>
-      <div class="price">R$ 68,00</div>
+
+      <div>
+        🍕 Portuguesa (Grande)
+      </div>
+
+      <div class="price">
+        R$ 68,00
+      </div>
+
     </div>
 
     <div class="item">
-      <div>🍕 Caipira (Grande)</div>
-      <div class="price">R$ 79,00</div>
+
+      <div>
+        🍕 Caipira (Grande)
+      </div>
+
+      <div class="price">
+        R$ 79,00
+      </div>
+
     </div>
 
   </div>
@@ -145,9 +192,11 @@ header p{
   <!-- HAMBÚRGUER -->
   <div class="card burger-card">
 
-    <h3 class="burger-title">🍔 Também temos hambúrguer artesanal</h3>
+    <h3 class="burger-title">
+      🍔 Também temos hambúrguer artesanal
+    </h3>
 
-    <p style="margin:0; font-size:14px;">
+    <p style="margin:0; font-size:14px; line-height:1.4;">
       🔥 Carne suculenta + queijo + molho especial<br>
       👉 Peça direto no cardápio completo
     </p>
@@ -155,19 +204,20 @@ header p{
   </div>
 
   <!-- BOTÕES -->
+
   <a class="btn whatsapp"
   href="https://wa.me/553438211320">
-  📲 Pedir no WhatsApp
+    📲 Pedir no WhatsApp
   </a>
 
   <a class="btn phone"
   href="tel:+553438211320">
-  📞 Ligar Agora
+    📞 Ligar Agora
   </a>
 
   <a class="btn saipos"
   href="https://talismapizzariaehamburgueria.saipos.com/home">
-  🛒 Ver Cardápio Completo
+    🛒 Ver Cardápio Completo
   </a>
 
 </div>
