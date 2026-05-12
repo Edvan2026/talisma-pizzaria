@@ -61,7 +61,16 @@ header p{
 
 .oldprice{
   font-size:12px;
-  opacity:0.7;
+  opacity:0.6;
+}
+
+.promo{
+  background:#25D366;
+  color:#fff;
+  padding:3px 8px;
+  border-radius:5px;
+  font-size:11px;
+  margin-left:6px;
 }
 
 .btn{
@@ -80,7 +89,7 @@ header p{
 .phone{ background:#2196F3; }
 .saipos{ background:#FF9800; }
 
-/* HAMBÚRGUER DESTAQUE */
+/* HAMBÚRGUER */
 .burger-card{
   border:2px solid #FF9800;
 }
@@ -105,11 +114,14 @@ header p{
   <div class="card">
     <h3>🔥 Mais Pedidas (Pizzas Grandes)</h3>
 
+    <!-- CALABRESA PROMOÇÃO -->
     <div class="item">
       <div>
-        🍕 Calabresa (Grande)<br>
-        <span class="oldprice"><s>R$ 57,90</s> PROMOÇÃO</span>
+        🍕 Calabresa (Grande)
+        <span class="promo">PROMOÇÃO</span><br>
+        <span class="oldprice"><s>R$ 57,90</s></span>
       </div>
+
       <div class="price">R$ 57,90</div>
     </div>
 
@@ -127,9 +139,10 @@ header p{
       <div>🍕 Caipira (Grande)</div>
       <div class="price">R$ 79,00</div>
     </div>
+
   </div>
 
-  <!-- HAMBÚRGUER DESTACADO -->
+  <!-- HAMBÚRGUER -->
   <div class="card burger-card">
 
     <h3 class="burger-title">🍔 Também temos hambúrguer artesanal</h3>
