@@ -31,7 +31,7 @@ function gtag_report_conversion(url) {
 
   setTimeout(function () {
     window.location.href = url;
-  }, 1000);
+  }, 800);
 
   return false;
 }
@@ -45,7 +45,7 @@ function gtag_report_conversion_tel(url) {
 
   setTimeout(function () {
     window.location.href = url;
-  }, 1000);
+  }, 800);
 
   return false;
 }
@@ -58,7 +58,6 @@ body{
   background:#141414;
   color:white;
   text-align:center;
-  padding-bottom:110px;
 }
 
 header{
@@ -208,26 +207,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 
   </div>
 </div>
-
-<!-- Botão fixo inferior -->
-<a
-  href="https://api.whatsapp.com/send?phone=553438211320&text=Quero%20a%20pizza%20de%20calabresa%20grande%20por%20R%2457%2C90%20agora"
-  onclick="return gtag_report_conversion(this.href);"
-  style="
-    position:fixed;
-    bottom:15px;
-    left:15px;
-    right:15px;
-    background:#25D366;
-    color:white;
-    padding:15px;
-    border-radius:12px;
-    text-align:center;
-    font-weight:bold;
-    text-decoration:none;
-    z-index:999;">
-  🍕 PEDIR AGORA
-</a>
 
 </body>
 </html>
