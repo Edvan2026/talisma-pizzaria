@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>TALISMÃ PIZZARIA | Pizza Calabresa em Patos de Minas</title>
+<title>TALISMÃ PIZZARIA | Pizza Delivery em Patos de Minas</title>
 
 <!-- Google Tag Manager -->
 <script>
@@ -52,6 +52,7 @@ function gtag_report_conversion_tel(url) {
 </script>
 
 <style>
+
 body{
   margin:0;
   font-family:Arial,sans-serif;
@@ -72,7 +73,7 @@ header{
   object-fit:contain;
   background:#fff;
   padding:5px;
-  border-radius:10px;
+  border-radius:12px;
   margin-bottom:10px;
 }
 
@@ -83,27 +84,39 @@ header{
 .card{
   background:#1a1a1a;
   padding:22px;
-  border-radius:12px;
+  border-radius:14px;
   max-width:420px;
   margin:20px auto;
-  box-shadow:0 2px 10px rgba(0,0,0,0.3);
+  box-shadow:0 2px 12px rgba(0,0,0,0.4);
 }
 
 h1{
-  font-size:22px;
-  margin:10px 0;
+  font-size:24px;
+  margin:12px 0;
+  line-height:1.3;
 }
 
 .preco{
-  font-size:34px;
+  font-size:38px;
   color:#25D366;
   font-weight:bold;
-  margin:10px 0;
+  margin:12px 0;
+}
+
+.prova-social{
+  background:#222;
+  padding:14px;
+  border-radius:10px;
+  margin-top:15px;
+  font-size:15px;
+  line-height:1.6;
 }
 
 .urgencia{
-  color:#ff3b3b;
+  color:#ff4d4d;
   font-weight:bold;
+  margin-top:15px;
+  font-size:16px;
 }
 
 .botao{
@@ -111,10 +124,25 @@ h1{
   background:#25D366;
   color:white;
   padding:20px;
-  margin:15px auto;
+  margin:18px auto;
   width:90%;
   max-width:340px;
-  font-size:18px;
+  font-size:19px;
+  border-radius:12px;
+  text-decoration:none;
+  font-weight:bold;
+  box-shadow:0 2px 10px rgba(0,0,0,0.3);
+}
+
+.botao-secundario{
+  display:block;
+  background:#128C7E;
+  color:white;
+  padding:16px;
+  margin:10px auto;
+  width:90%;
+  max-width:340px;
+  font-size:16px;
   border-radius:10px;
   text-decoration:none;
   font-weight:bold;
@@ -124,7 +152,7 @@ h1{
   display:block;
   background:#0984e3;
   color:white;
-  padding:16px;
+  padding:15px;
   margin:10px auto;
   width:90%;
   max-width:340px;
@@ -137,14 +165,22 @@ h1{
 .aviso{
   font-size:14px;
   color:#bbb;
-  margin-top:10px;
+  margin-top:8px;
 }
 
 .footer{
   font-size:13px;
   color:#aaa;
-  margin-top:15px;
+  margin-top:18px;
+  line-height:1.5;
 }
+
+.info{
+  margin-top:12px;
+  font-size:15px;
+  line-height:1.5;
+}
+
 </style>
 </head>
 
@@ -158,54 +194,92 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 <!-- End Google Tag Manager (noscript) -->
 
 <header>
+
   <img src="logo.png" class="logo" alt="Talismã Pizzaria">
-  <p>🍕 Pizza artesanal em Patos de Minas</p>
+
+  <h2>🍕 Talismã Pizzaria</h2>
+
+  <p>Pizza Delivery em Patos de Minas</p>
+
 </header>
 
 <div class="container">
+
   <div class="card">
 
     <img src="pizza-calabresa.jpg"
-    style="width:100%;border-radius:12px;margin-bottom:10px;"
+    style="width:100%;border-radius:12px;margin-bottom:12px;"
     alt="Pizza Calabresa">
 
-    <h1>🍕 Calabresa Grande Extra Recheada</h1>
+    <h1>
+      🍕 Pizza Calabresa Grande Extra Recheada
+    </h1>
 
-    <div class="preco">R$57,90</div>
+    <div class="preco">
+      R$57,90
+    </div>
 
-    <p style="font-weight:bold;">
-      ⭐ Mais de 500 pedidos entregues em Patos de Minas
-    </p>
+    <div style="font-size:18px;font-weight:bold;">
+      ⭐ 4,9 no Google • 332 avaliações reais
+    </div>
+
+    <div class="info">
+      🍕 Pizza artesanal feita na hora em Patos de Minas
+    </div>
+
+    <div class="prova-social">
+      ✅ Entrega rápida em Patos de Minas<br>
+      ✅ Pizza feita na hora<br>
+      ✅ Atendimento direto no WhatsApp
+    </div>
 
     <p class="urgencia">
-      🔥 Promoção válida hoje ou até acabar a massa do dia
+      🔥 Pizza quentinha saindo agora • peça antes do pico da noite
     </p>
 
-    <p>⏱️ Pronta em 20 a 30 minutos • Retirada ou entrega</p>
+    <p style="font-size:15px;">
+      ⏱️ Pronta em 20 a 30 minutos • Retirada ou entrega
+    </p>
 
-    <!-- Botão principal WhatsApp -->
+    <!-- BOTÃO PRINCIPAL -->
     <a class="botao"
-      href="https://api.whatsapp.com/send?phone=553438211320&text=Quero%20a%20pizza%20de%20calabresa%20grande%20por%20R%2457%2C90%20agora"
+      href="https://api.whatsapp.com/send?phone=553438211320&text=Quero%20a%20pizza%20calabresa%20grande%20por%20R%2457%2C90"
       onclick="return gtag_report_conversion(this.href);">
+
       🔥 PEDIR AGORA NO WHATSAPP
+
     </a>
 
     <div class="aviso">
-      👉 Clique e finalize seu pedido em menos de 1 minuto
+      👉 Atendimento rápido direto no WhatsApp
     </div>
 
-    <!-- Botão telefone -->
+    <!-- SEGUNDO BOTÃO WHATSAPP -->
+    <a class="botao-secundario"
+      href="https://api.whatsapp.com/send?phone=553438211320&text=Quero%20ver%20o%20cardápio%20da%20Talismã%20Pizzaria"
+      onclick="return gtag_report_conversion(this.href);">
+
+      📲 VER CARDÁPIO NO WHATSAPP
+
+    </a>
+
+    <!-- BOTÃO LIGAÇÃO -->
     <a class="botao-ligar"
       href="tel:+553438211320"
       onclick="return gtag_report_conversion_tel(this.href);">
-      📞 Ligue agora e receba seu pedido mais rápido
+
+      📞 LIGAR AGORA
+
     </a>
 
     <div class="footer">
-      🍕 Forno sempre quente • Atendimento rápido • Entrega local
+      🍕 Forno sempre quente<br>
+      🚀 Delivery rápido em Patos de Minas<br>
+      ❤️ Clientes satisfeitos todos os dias
     </div>
 
   </div>
+
 </div>
 
 </body>
