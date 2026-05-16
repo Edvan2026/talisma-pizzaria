@@ -61,82 +61,141 @@ body{
   text-align:center;
 }
 
+/* HEADER */
+
 header{
   background:#0d3b66;
   color:#fff;
-  padding:20px;
+  padding:22px 20px;
+  box-shadow:0 2px 10px rgba(0,0,0,0.3);
 }
 
 .logo{
-  width:90px;
-  height:90px;
+  width:95px;
+  height:95px;
   object-fit:contain;
   background:#fff;
-  padding:5px;
+  padding:6px;
   border-radius:12px;
   margin-bottom:10px;
 }
+
+header h1{
+  margin:0;
+  font-size:26px;
+}
+
+header p{
+  margin-top:8px;
+  font-size:15px;
+  opacity:0.95;
+}
+
+/* CONTAINER */
 
 .container{
   padding:20px;
 }
 
+/* CARD */
+
 .card{
-  background:#1a1a1a;
+  background:#1b1b1b;
   padding:22px;
-  border-radius:14px;
-  max-width:420px;
-  margin:20px auto;
-  box-shadow:0 2px 12px rgba(0,0,0,0.4);
+  border-radius:16px;
+  max-width:430px;
+  margin:20px auto 100px;
+  box-shadow:0 2px 14px rgba(0,0,0,0.35);
 }
 
-h1{
-  font-size:24px;
-  margin:12px 0;
-  line-height:1.3;
+/* FOTO */
+
+.pizza-img{
+  width:100%;
+  border-radius:14px;
+  margin-bottom:15px;
 }
+
+/* TITULOS */
+
+h2{
+  font-size:28px;
+  margin:0 0 10px;
+  line-height:1.2;
+}
+
+.subtitulo{
+  font-size:16px;
+  color:#ddd;
+  margin-bottom:16px;
+}
+
+/* PREÇO */
 
 .preco{
-  font-size:38px;
+  font-size:42px;
   color:#25D366;
   font-weight:bold;
-  margin:12px 0;
+  margin:14px 0;
 }
+
+/* PROVA SOCIAL */
 
 .prova-social{
   background:#222;
   padding:14px;
-  border-radius:10px;
-  margin-top:15px;
+  border-radius:12px;
+  margin:18px 0;
+  line-height:1.5;
   font-size:15px;
-  line-height:1.6;
 }
+
+.prova-social strong{
+  color:#25D366;
+}
+
+/* URGENCIA */
 
 .urgencia{
   color:#ff4d4d;
   font-weight:bold;
-  margin-top:15px;
   font-size:16px;
+  margin:18px 0;
 }
+
+/* INFO */
+
+.info{
+  font-size:15px;
+  color:#ddd;
+  margin-bottom:18px;
+  line-height:1.5;
+}
+
+/* BOTÕES */
 
 .botao{
   display:block;
   background:#25D366;
   color:white;
   padding:20px;
-  margin:18px auto;
+  margin:15px auto;
   width:90%;
   max-width:340px;
   font-size:19px;
   border-radius:12px;
   text-decoration:none;
   font-weight:bold;
-  box-shadow:0 2px 10px rgba(0,0,0,0.3);
+  box-shadow:0 4px 10px rgba(0,0,0,0.3);
 }
 
-.botao-secundario{
+.botao:hover{
+  transform:scale(1.02);
+}
+
+.botao-ligar{
   display:block;
-  background:#128C7E;
+  background:#0984e3;
   color:white;
   padding:16px;
   margin:10px auto;
@@ -148,19 +207,7 @@ h1{
   font-weight:bold;
 }
 
-.botao-ligar{
-  display:block;
-  background:#0984e3;
-  color:white;
-  padding:15px;
-  margin:10px auto;
-  width:90%;
-  max-width:340px;
-  font-size:16px;
-  border-radius:10px;
-  text-decoration:none;
-  font-weight:bold;
-}
+/* AVISO */
 
 .aviso{
   font-size:14px;
@@ -168,17 +215,37 @@ h1{
   margin-top:8px;
 }
 
+/* FOOTER */
+
 .footer{
   font-size:13px;
-  color:#aaa;
+  color:#999;
   margin-top:18px;
-  line-height:1.5;
+  line-height:1.6;
 }
 
-.info{
-  margin-top:12px;
-  font-size:15px;
-  line-height:1.5;
+/* BOTÃO FIXO */
+
+.botao-fixo{
+  position:fixed;
+  bottom:15px;
+  left:50%;
+  transform:translateX(-50%);
+  width:92%;
+  max-width:420px;
+  background:#25D366;
+  color:white;
+  text-decoration:none;
+  padding:16px;
+  border-radius:14px;
+  font-size:18px;
+  font-weight:bold;
+  box-shadow:0 4px 15px rgba(0,0,0,0.35);
+  z-index:9999;
+}
+
+.botao-fixo:hover{
+  transform:translateX(-50%) scale(1.02);
 }
 
 </style>
@@ -197,9 +264,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 
   <img src="logo.png" class="logo" alt="Talismã Pizzaria">
 
-  <h2>🍕 Talismã Pizzaria</h2>
+  <h1>🍕 TALISMÃ PIZZARIA</h1>
 
-  <p>Pizza Delivery em Patos de Minas</p>
+  <p>Pizza Delivery em Patos de Minas • Entrega Rápida</p>
 
 </header>
 
@@ -208,40 +275,36 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <div class="card">
 
     <img src="pizza-calabresa.jpg"
-    style="width:100%;border-radius:12px;margin-bottom:12px;"
+    class="pizza-img"
     alt="Pizza Calabresa">
 
-    <h1>
-      🍕 Pizza Calabresa Grande Extra Recheada
-    </h1>
+    <h2>🍕 Pizza Calabresa Grande</h2>
+
+    <div class="subtitulo">
+      Pizza artesanal feita na hora com muito recheio
+    </div>
 
     <div class="preco">
       R$57,90
     </div>
 
-    <div style="font-size:18px;font-weight:bold;">
-      ⭐ 4,9 no Google • 332 avaliações reais
+    <div class="prova-social">
+      ⭐ <strong>4,9 no Google</strong><br>
+      Mais de <strong>332 avaliações reais</strong><br>
+      🍕 Centenas de clientes atendidos em Patos de Minas
+    </div>
+
+    <div class="urgencia">
+      🔥 Promoção válida hoje ou até acabar a massa do dia
     </div>
 
     <div class="info">
-      🍕 Pizza artesanal feita na hora em Patos de Minas
+      ⏱️ Pronta em 20 a 30 minutos<br>
+      🚗 Retirada ou entrega rápida<br>
+      📍 Atendimento em Patos de Minas
     </div>
 
-    <div class="prova-social">
-      ✅ Entrega rápida em Patos de Minas<br>
-      ✅ Pizza feita na hora<br>
-      ✅ Atendimento direto no WhatsApp
-    </div>
-
-    <p class="urgencia">
-      🔥 Pizza quentinha saindo agora • peça antes do pico da noite
-    </p>
-
-    <p style="font-size:15px;">
-      ⏱️ Pronta em 20 a 30 minutos • Retirada ou entrega
-    </p>
-
-    <!-- BOTÃO PRINCIPAL -->
+    <!-- BOTÃO WHATSAPP PRINCIPAL -->
     <a class="botao"
       href="https://api.whatsapp.com/send?phone=553438211320&text=Quero%20a%20pizza%20calabresa%20grande%20por%20R%2457%2C90"
       onclick="return gtag_report_conversion(this.href);">
@@ -251,19 +314,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </a>
 
     <div class="aviso">
-      👉 Atendimento rápido direto no WhatsApp
+      👉 Clique e finalize seu pedido em menos de 1 minuto
     </div>
 
-    <!-- SEGUNDO BOTÃO WHATSAPP -->
-    <a class="botao-secundario"
-      href="https://api.whatsapp.com/send?phone=553438211320&text=Quero%20ver%20o%20cardápio%20da%20Talismã%20Pizzaria"
-      onclick="return gtag_report_conversion(this.href);">
-
-      📲 VER CARDÁPIO NO WHATSAPP
-
-    </a>
-
-    <!-- BOTÃO LIGAÇÃO -->
+    <!-- BOTÃO TELEFONE -->
     <a class="botao-ligar"
       href="tel:+553438211320"
       onclick="return gtag_report_conversion_tel(this.href);">
@@ -273,14 +327,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </a>
 
     <div class="footer">
-      🍕 Forno sempre quente<br>
-      🚀 Delivery rápido em Patos de Minas<br>
-      ❤️ Clientes satisfeitos todos os dias
+      🍕 Pizza quentinha • Atendimento rápido • Delivery em Patos de Minas
     </div>
 
   </div>
 
 </div>
+
+<!-- BOTÃO FIXO -->
+<a class="botao-fixo"
+  href="https://api.whatsapp.com/send?phone=553438211320&text=Quero%20a%20pizza%20calabresa%20grande%20por%20R%2457%2C90"
+  onclick="return gtag_report_conversion(this.href);">
+
+  🍕 QUERO MINHA PIZZA
+
+</a>
 
 </body>
 </html>
