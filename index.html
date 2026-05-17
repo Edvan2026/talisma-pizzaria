@@ -8,25 +8,22 @@
 
 <!-- Google Tag Manager -->
 <script>
-(function(w,d,s,l,i){
-  w[l]=w[l]||[];
-  w[l].push({
-    'gtm.start': new Date().getTime(),
-    event:'gtm.js'
-  });
-  var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),
-      dl=l!='dataLayer' ? '&l='+l : '';
-
-  j.async=true;
-  j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
-  f.parentNode.insertBefore(j,f);
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({
+  'gtm.start': new Date().getTime(),
+  event:'gtm.js'
+});
+var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer' ? '&l='+l : '';
+j.async=true;
+j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-KQTQM4JS');
 </script>
 <!-- End Google Tag Manager -->
 
 <script>
 function gtag_report_conversion(url) {
+
   window.dataLayer = window.dataLayer || [];
 
   dataLayer.push({
@@ -35,12 +32,13 @@ function gtag_report_conversion(url) {
 
   setTimeout(function () {
     window.location.href = url;
-  }, 100);
+  }, 350);
 
   return false;
 }
 
 function gtag_report_conversion_tel(url) {
+
   window.dataLayer = window.dataLayer || [];
 
   dataLayer.push({
@@ -49,7 +47,7 @@ function gtag_report_conversion_tel(url) {
 
   setTimeout(function () {
     window.location.href = url;
-  }, 100);
+  }, 350);
 
   return false;
 }
@@ -170,6 +168,11 @@ h2{
   text-decoration:none;
   font-weight:bold;
   box-shadow:0 4px 10px rgba(0,0,0,0.3);
+  transition:0.2s;
+}
+
+.botao:hover{
+  transform:scale(1.02);
 }
 
 .botao-ligar{
@@ -184,6 +187,11 @@ h2{
   border-radius:10px;
   text-decoration:none;
   font-weight:bold;
+  transition:0.2s;
+}
+
+.botao-ligar:hover{
+  transform:scale(1.02);
 }
 
 .aviso{
@@ -215,12 +223,18 @@ h2{
   font-weight:bold;
   box-shadow:0 4px 15px rgba(0,0,0,0.35);
   z-index:9999;
+  transition:0.2s;
+}
+
+.botao-fixo:hover{
+  transform:translateX(-50%) scale(1.02);
 }
 </style>
 </head>
 
 <body>
 
+<!-- Google Tag Manager (noscript) -->
 <noscript>
 <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KQTQM4JS"
 height="0" width="0" style="display:none;visibility:hidden"></iframe>
@@ -243,7 +257,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       Pizza artesanal feita na hora com muito recheio
     </div>
 
-    <div class="preco">R$57,90</div>
+    <div class="preco">
+      R$57,90
+    </div>
 
     <div class="prova-social">
       ⭐ <strong>4,9 no Google</strong><br>
