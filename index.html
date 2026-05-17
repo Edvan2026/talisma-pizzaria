@@ -8,23 +8,25 @@
 
 <!-- Google Tag Manager -->
 <script>
-(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({
-  'gtm.start': new Date().getTime(),
-  event:'gtm.js'
-});
-var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer' ? '&l='+l : '';
-j.async=true;
-j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
-f.parentNode.insertBefore(j,f);
+(function(w,d,s,l,i){
+  w[l]=w[l]||[];
+  w[l].push({
+    'gtm.start': new Date().getTime(),
+    event:'gtm.js'
+  });
+  var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),
+      dl=l!='dataLayer' ? '&l='+l : '';
+
+  j.async=true;
+  j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+  f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-KQTQM4JS');
 </script>
 <!-- End Google Tag Manager -->
 
 <script>
-
 function gtag_report_conversion(url) {
-
   window.dataLayer = window.dataLayer || [];
 
   dataLayer.push({
@@ -33,13 +35,12 @@ function gtag_report_conversion(url) {
 
   setTimeout(function () {
     window.location.href = url;
-  }, 800);
+  }, 100);
 
   return false;
 }
 
 function gtag_report_conversion_tel(url) {
-
   window.dataLayer = window.dataLayer || [];
 
   dataLayer.push({
@@ -48,15 +49,13 @@ function gtag_report_conversion_tel(url) {
 
   setTimeout(function () {
     window.location.href = url;
-  }, 800);
+  }, 100);
 
   return false;
 }
-
 </script>
 
 <style>
-
 body{
   margin:0;
   font-family:Arial,sans-serif;
@@ -64,8 +63,6 @@ body{
   color:white;
   text-align:center;
 }
-
-/* HEADER */
 
 header{
   background:#0d3b66;
@@ -95,13 +92,9 @@ header p{
   opacity:0.95;
 }
 
-/* CONTAINER */
-
 .container{
   padding:20px;
 }
-
-/* CARD */
 
 .card{
   background:#1b1b1b;
@@ -112,15 +105,11 @@ header p{
   box-shadow:0 2px 14px rgba(0,0,0,0.35);
 }
 
-/* FOTO */
-
 .pizza-img{
   width:100%;
   border-radius:14px;
   margin-bottom:15px;
 }
-
-/* TITULOS */
 
 h2{
   font-size:28px;
@@ -134,16 +123,12 @@ h2{
   margin-bottom:16px;
 }
 
-/* PREÇO */
-
 .preco{
   font-size:42px;
   color:#25D366;
   font-weight:bold;
   margin:14px 0;
 }
-
-/* PROVA SOCIAL */
 
 .prova-social{
   background:#222;
@@ -158,8 +143,6 @@ h2{
   color:#25D366;
 }
 
-/* URGÊNCIA */
-
 .urgencia{
   color:#ff4d4d;
   font-weight:bold;
@@ -167,16 +150,12 @@ h2{
   margin:18px 0;
 }
 
-/* INFO */
-
 .info{
   font-size:15px;
   color:#ddd;
   margin-bottom:18px;
   line-height:1.5;
 }
-
-/* BOTÕES */
 
 .botao{
   display:block;
@@ -191,11 +170,6 @@ h2{
   text-decoration:none;
   font-weight:bold;
   box-shadow:0 4px 10px rgba(0,0,0,0.3);
-  transition:0.2s;
-}
-
-.botao:hover{
-  transform:scale(1.02);
 }
 
 .botao-ligar{
@@ -210,14 +184,7 @@ h2{
   border-radius:10px;
   text-decoration:none;
   font-weight:bold;
-  transition:0.2s;
 }
-
-.botao-ligar:hover{
-  transform:scale(1.02);
-}
-
-/* AVISO */
 
 .aviso{
   font-size:14px;
@@ -225,16 +192,12 @@ h2{
   margin-top:8px;
 }
 
-/* FOOTER */
-
 .footer{
   font-size:13px;
   color:#999;
   margin-top:18px;
   line-height:1.6;
 }
-
-/* BOTÃO FIXO */
 
 .botao-fixo{
   position:fixed;
@@ -252,42 +215,27 @@ h2{
   font-weight:bold;
   box-shadow:0 4px 15px rgba(0,0,0,0.35);
   z-index:9999;
-  transition:0.2s;
 }
-
-.botao-fixo:hover{
-  transform:translateX(-50%) scale(1.02);
-}
-
 </style>
 </head>
 
 <body>
 
-<!-- Google Tag Manager (noscript) -->
 <noscript>
 <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KQTQM4JS"
 height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </noscript>
-<!-- End Google Tag Manager (noscript) -->
 
 <header>
-
   <img src="logo.png" class="logo" alt="Talismã Pizzaria">
-
   <h1>🍕 TALISMÃ PIZZARIA</h1>
-
   <p>Pizza Delivery em Patos de Minas • Entrega Rápida</p>
-
 </header>
 
 <div class="container">
-
   <div class="card">
 
-    <img src="pizza-calabresa.jpg"
-    class="pizza-img"
-    alt="Pizza Calabresa">
+    <img src="pizza-calabresa.jpg" class="pizza-img" alt="Pizza Calabresa">
 
     <h2>🍕 Pizza Calabresa Grande</h2>
 
@@ -295,9 +243,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       Pizza artesanal feita na hora com muito recheio
     </div>
 
-    <div class="preco">
-      R$57,90
-    </div>
+    <div class="preco">R$57,90</div>
 
     <div class="prova-social">
       ⭐ <strong>4,9 no Google</strong><br>
@@ -315,26 +261,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       📍 Atendimento em Patos de Minas
     </div>
 
-    <!-- BOTÃO WHATSAPP PRINCIPAL -->
     <a class="botao"
       href="https://api.whatsapp.com/send?phone=553438211320&text=Quero%20a%20pizza%20calabresa%20grande%20por%20R%2457%2C90"
       onclick="return gtag_report_conversion(this.href);">
-
       🔥 PEDIR AGORA NO WHATSAPP
-
     </a>
 
     <div class="aviso">
       👉 Clique e finalize seu pedido em menos de 1 minuto
     </div>
 
-    <!-- BOTÃO TELEFONE -->
     <a class="botao-ligar"
       href="tel:+553438211320"
       onclick="return gtag_report_conversion_tel(this.href);">
-
       📞 LIGAR AGORA
-
     </a>
 
     <div class="footer">
@@ -342,16 +282,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
 
   </div>
-
 </div>
 
-<!-- BOTÃO FIXO -->
 <a class="botao-fixo"
   href="https://api.whatsapp.com/send?phone=553438211320&text=Quero%20a%20pizza%20calabresa%20grande%20por%20R%2457%2C90"
   onclick="return gtag_report_conversion(this.href);">
-
   🍕 QUERO MINHA PIZZA
-
 </a>
 
 </body>
