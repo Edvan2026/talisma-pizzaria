@@ -22,6 +22,7 @@ f.parentNode.insertBefore(j,f);
 <!-- End Google Tag Manager -->
 
 <script>
+
 function gtag_report_conversion(url) {
 
   window.dataLayer = window.dataLayer || [];
@@ -51,9 +52,11 @@ function gtag_report_conversion_tel(url) {
 
   return false;
 }
+
 </script>
 
 <style>
+
 body{
   margin:0;
   font-family:Arial,sans-serif;
@@ -61,6 +64,8 @@ body{
   color:white;
   text-align:center;
 }
+
+/* HEADER */
 
 header{
   background:#0d3b66;
@@ -90,9 +95,13 @@ header p{
   opacity:0.95;
 }
 
+/* CONTAINER */
+
 .container{
   padding:20px;
 }
+
+/* CARD */
 
 .card{
   background:#1b1b1b;
@@ -103,11 +112,15 @@ header p{
   box-shadow:0 2px 14px rgba(0,0,0,0.35);
 }
 
+/* FOTO */
+
 .pizza-img{
   width:100%;
   border-radius:14px;
   margin-bottom:15px;
 }
+
+/* TITULOS */
 
 h2{
   font-size:28px;
@@ -121,12 +134,25 @@ h2{
   margin-bottom:16px;
 }
 
+/* PREÇO */
+
 .preco{
-  font-size:42px;
+  font-size:46px;
   color:#25D366;
   font-weight:bold;
   margin:14px 0;
 }
+
+/* PREÇO ANTIGO */
+
+.preco-antigo{
+  color:#999;
+  text-decoration:line-through;
+  font-size:20px;
+  margin-bottom:5px;
+}
+
+/* PROVA SOCIAL */
 
 .prova-social{
   background:#222;
@@ -141,6 +167,8 @@ h2{
   color:#25D366;
 }
 
+/* URGÊNCIA */
+
 .urgencia{
   color:#ff4d4d;
   font-weight:bold;
@@ -148,12 +176,16 @@ h2{
   margin:18px 0;
 }
 
+/* INFO */
+
 .info{
   font-size:15px;
   color:#ddd;
   margin-bottom:18px;
   line-height:1.5;
 }
+
+/* BOTÕES */
 
 .botao{
   display:block;
@@ -194,11 +226,15 @@ h2{
   transform:scale(1.02);
 }
 
+/* AVISO */
+
 .aviso{
   font-size:14px;
   color:#bbb;
   margin-top:8px;
 }
+
+/* FOOTER */
 
 .footer{
   font-size:13px;
@@ -206,6 +242,8 @@ h2{
   margin-top:18px;
   line-height:1.6;
 }
+
+/* BOTÃO FIXO */
 
 .botao-fixo{
   position:fixed;
@@ -229,26 +267,36 @@ h2{
 .botao-fixo:hover{
   transform:translateX(-50%) scale(1.02);
 }
+
 </style>
 </head>
 
 <body>
 
+<!-- Google Tag Manager (noscript) -->
 <noscript>
 <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KQTQM4JS"
 height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </noscript>
+<!-- End Google Tag Manager (noscript) -->
 
 <header>
+
   <img src="logo.png" class="logo" alt="Talismã Pizzaria">
+
   <h1>🍕 TALISMÃ PIZZARIA</h1>
+
   <p>Pizza Delivery em Patos de Minas • Entrega Rápida</p>
+
 </header>
 
 <div class="container">
+
   <div class="card">
 
-    <img src="pizza-calabresa.jpg" class="pizza-img" alt="Pizza Calabresa">
+    <img src="pizza-calabresa.jpg"
+    class="pizza-img"
+    alt="Pizza Calabresa">
 
     <h2>🍕 Pizza Calabresa Grande</h2>
 
@@ -256,8 +304,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       Pizza artesanal feita na hora com muito recheio
     </div>
 
+    <div class="preco-antigo">
+      de R$68,00
+    </div>
+
     <div class="preco">
-      R$57,90
+      R$49,90
     </div>
 
     <div class="prova-social">
@@ -276,20 +328,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       📍 Atendimento em Patos de Minas
     </div>
 
+    <!-- BOTÃO WHATSAPP PRINCIPAL -->
+
     <a class="botao"
-      href="https://wa.me/553438211320?text=Ol%C3%A1%2C%20vim%20pelo%20Google%20e%20quero%20fazer%20um%20pedido."
+      href="https://wa.me/553438211320?text=Ol%C3%A1%2C%20vim%20pelo%20Google%20e%20quero%20pedir%20a%20pizza%20calabresa%20grande%20por%20R%2449%2C90"
       onclick="return gtag_report_conversion(this.href);">
+
       🔥 PEDIR AGORA NO WHATSAPP
+
     </a>
 
     <div class="aviso">
       👉 Clique e finalize seu pedido em menos de 1 minuto
     </div>
 
+    <!-- BOTÃO TELEFONE -->
+
     <a class="botao-ligar"
       href="tel:+553438211320"
       onclick="return gtag_report_conversion_tel(this.href);">
+
       📞 LIGAR AGORA
+
     </a>
 
     <div class="footer">
@@ -297,12 +357,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
 
   </div>
+
 </div>
 
+<!-- BOTÃO FIXO -->
+
 <a class="botao-fixo"
-  href="https://wa.me/553438211320?text=Ol%C3%A1%2C%20vim%20pelo%20Google%20e%20quero%20fazer%20um%20pedido."
+  href="https://wa.me/553438211320?text=Ol%C3%A1%2C%20vim%20pelo%20Google%20e%20quero%20pedir%20a%20pizza%20calabresa%20grande%20por%20R%2449%2C90"
   onclick="return gtag_report_conversion(this.href);">
+
   🍕 QUERO MINHA PIZZA
+
 </a>
 
 </body>
